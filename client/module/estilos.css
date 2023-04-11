@@ -1,0 +1,55 @@
+@charset "UTF-8";
+@media screen and (min-width: 110px){
+    #caja{
+        background: aqua;
+        margin-top: .75em;
+        margin-left: .75em;
+        margin-right: .75em;
+        font-size: 80%;
+    }
+}
+@media screen and (min-width: 330px){
+    #caja{
+        background: aquamarine;
+        margin-top: 1.1em;
+        margin-left: 1.1em;
+        margin-right: 1.1em;
+        font-size: 90%;
+    }
+}
+@media screen and (min-width: 660px){
+    #caja{
+        background: red;
+        margin-top: 1.45em;
+        margin-left: 1.45em;
+        margin-right: 1.45em;
+        font-size: 100%;
+    }
+}
+@media screen and (min-width: 990px){
+    #caja{
+        background: gray;
+        margin-top: 1.8em;
+        margin-left: 1.8em;
+        margin-right: 1.8em;
+        font-size: 110%;
+    }
+}
+@media screen and (min-width: 1200px){
+    #caja{
+        background: darkgreen;
+        margin-top: 2.15em;
+        margin-left: 2.15em;
+        margin-right: 2.15em;
+        font-size: 120%;
+    }
+}
+@media screen and (min-width: 1920px){
+    #caja{
+        background: darkred;
+        margin-top: 2.5em;
+        margin-left: 2.5em;
+        margin-right: 2.5em;
+        font-size: 130%;
+    }
+}

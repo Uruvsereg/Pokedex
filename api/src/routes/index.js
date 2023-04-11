@@ -1,4 +1,5 @@
 const { Router } = require('express');
+const { axios } = require('axios');
 const { agregar, getPokemon, getPokemons, getXNombre, getTipos } = require('../controllers/controladores');
 // Importar todos los routers;
 // Ejemplo: const authRouter = require('./auth.js');
@@ -11,7 +12,14 @@ const router = Router();
 //arreglo de objetos, pokemon con su info
 router.get('/pokemons'), async (req, res) => { 
     try {
-        
+        return async (dispatch) => {
+            const response = await axios.post("http://pokeapi.co/api/v2/pokemon/ditto", character);
+            const data = response.data;
+            return dispatch({
+                type: agregar,
+                payload: data,
+            })
+        }
     }
     catch (error) {
         
@@ -31,7 +39,16 @@ router.get('/pokemons/:id'), async (req, res) => {
 //obtener pokemons que coincidan con query, not casesensitive, API+BD
 router.get('/pokemons/{name}'), async (req, res) => {
     try {
-        
+        function buscanombres(nombre, buscar){//sirve para buscar cpoincidencias
+            for(let j=0;j<nombre.length;j++){
+                for(let u=0;u<buscar.length;u++){
+                    if (frase[j+u] === buscar[u]){
+                        if(u === buscar.length -1) return j;
+                    }else break;
+                }
+            }
+            return -1;
+        }
     }
     catch (error) {
         
@@ -59,3 +76,17 @@ router.get('/types'), async (req, res) => {
 }
 
 module.exports = router;
+
+
+/* 
+function buscanombres(nombre, buscar){//sirve para buscar cpoincidencias
+    for(let j=0;j<nombre.length;j++){
+        for(let u=0;u<buscar.length;u++){
+            if (frase[j+u] === buscar[u]){
+                if(u === buscar.length -1) return j;
+            }else break;
+        }
+    }
+    return -1;
+}
+*/
