@@ -18,7 +18,7 @@ function SearchBar({onSearch}) {
     return (
         <div className={style.sb}>
             <input type='search' value={pokemon} onChange={handleChange} onKeyDown={handleKeyPress} className={style.bus}/>
-            <button onClick={() => onSearch(pokemon)} className={style.bot}/>Buscar
+            <button onClick={() => onSearch(pokemon)} className={style.bot}/><label>Buscar</label>
         </div>
     )
 }

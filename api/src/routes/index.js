@@ -10,21 +10,9 @@ const router = Router();
 // Ejemplo: router.use('/auth', authRouter);
 
 //arreglo de objetos, pokemon con su info
-router.get('/pokemons'), async (req, res) => { 
-    try {
-        return async (dispatch) => {
-            const response = await axios.post("http://pokeapi.co/api/v2/pokemon/ditto", character);
-            const data = response.data;
-            return dispatch({
-                type: agregar,
-                payload: data,
-            })
-        }
-    }
-    catch (error) {
-        
-    }
-}
+router.get('/pokemons', (req, res) => {
+    res.status(200).send('Llegué a la ruta pokemons')
+})
 
 //detalle pokemon especifico, id por parámetro, API+BD
 router.get('/pokemons/:id'), async (req, res) => { 
