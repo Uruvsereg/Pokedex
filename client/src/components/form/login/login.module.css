@@ -1,0 +1,49 @@
+@font-face {
+    font-family: 'poke1';
+    src: url('../../../fonts/PokemonSolid.ttf');
+}
+@font-face {
+    font-family: 'poke2';
+    src: url('../../../fonts/Pokemon\ Hollow.ttf');
+}
+/* .poke1{
+    font-family: 'poke1';
+} */
+:root{
+    background-image: url('../../../Multimedia/IMG/inicialesG1.jpg');
+}
+h1::first-letter{
+    font-size: 100%;
+    font-family: 'poke1';
+}
+.ing{
+    /* font-family: 'poke1';
+    color: #ffcb05; */
+}
+label{
+    font-size: 2em;
+    font-family: 'poke1';
+    color: #ffcb05;
+}
+.label1{
+    font-family: 'poke2';
+    position: absolute;
+    padding-right: 5rem;
+    color:#3d7dca;
+}
+.loginp{
+
+}
+.logp{
+
+}
+.bot button{
+    height: 12.13rem;
+    width: 12.13rem;
+    border: 0 solid transparent ;
+    background: url(../../../Multimedia/IMG/IMG.png);
+    /* background-size: cover; */
+    background-position: center center;
+    /* background-attachment: fixed; */
+    background-repeat: no-repeat;
+}

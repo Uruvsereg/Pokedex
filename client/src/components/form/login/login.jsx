@@ -2,7 +2,7 @@ import { useState } from "react";
 import style from './login.module.css';
 import validation from "./validations";
 
-const Form=({login})=>{
+const Formli=({login})=>{
     const [userData,setUserData]=useState({ 
         username:'',
         password:''
@@ -36,21 +36,23 @@ const Form=({login})=>{
             <form onSubmit={handleSubmit}>
                 <div className={style.ing}>
                     <div className={style.loginu}>
+                        <label htmlFor='username' className={style.label1}>Username:  </label>
                         <label htmlFor='username'>Username:  </label>
                         <input type='text' name='username' value={userData.username} onChange={handleInputChange} className={style.lue}></input>
                         {errors.username && <p className={style.logp}>{errors.username}</p>}
                     </div>
                     <div className={style.loginp}>
+                        <label htmlFor='password' className={style.label1}> Password:  </label>
                         <label htmlFor='password'> Password:  </label>
                         <input type='password' name='password' value={userData.password} onChange={handleInputChange} className={style.lpe}></input>
                         {errors.password && <p className={style.logp}>{errors.password}</p>}
                     </div>
                 </div>
                 <div className={style.bot}>
-                    <button>Registro</button>
+                    <button></button>
                 </div>
             </form>
         </div>
     )
 }
-export default Form;
+export default Formli;

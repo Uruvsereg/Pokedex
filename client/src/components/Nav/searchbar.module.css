@@ -1,0 +1,9 @@
+button{
+    height: 1.2rem;
+    width: 1.2rem;
+    margin-top: .5rem;
+    border: 0 solid transparent;
+    background-image: url('../../Multimedia/IMG/Ultraball.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+}

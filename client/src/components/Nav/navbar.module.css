@@ -1,0 +1,14 @@
+.bn{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-size: 10px;
+    height: 25px;
+    text-align: center;
+    margin-left: 100px;
+    border: 1px solid red;
+}
+button{
+    background-color: #ffcb05;
+    border: .2rem solid #3d7dca;;
+}

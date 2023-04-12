@@ -1,0 +1,21 @@
+@font-face {
+    font-family: 'poke1';
+    src: url(../../fonts/Pokemon\ Solid.ttf);
+}
+@font-face {
+    font-family: 'poke2';
+    src: url(../../fonts/Pokemon\ Hollow.ttf);
+}
+@font-face {
+    font-family: 'uru';
+    src: url(../../fonts/Zombie_Holocaust.ttf);
+}
+.poke1{
+    font-family: 'poke1';
+}
+.poke2{
+    font-family: 'poke2';
+}
+.uru{
+    font-family: 'uru';
+}
