@@ -1,3 +1,11 @@
+@font-face {
+    font-family: 'poke1';
+    src: url(../../fonts/PokemonSolid.ttf);
+}
+@font-face {
+    font-family: 'poke2';
+    src: url(../../fonts/Pokemon\ Hollow.ttf);
+}
 button{
     height: 1.2rem;
     width: 1.2rem;
@@ -6,4 +14,31 @@ button{
     background-image: url('../../Multimedia/IMG/Ultraball.png');
     background-position: center center;
     background-repeat: no-repeat;
+    border-radius: .75em;
+}
+.bus{
+    background-color: #ffcb05;
+    border: 0.2rem solid #3d7dca;
+    border-radius: 1rem;
+}
+label{
+    font-family: 'poke1';
+    color: #ffcb05;
+    font-size: 250%;
+
+}
+.label0{
+    font-family: 'poke1';
+    color: #ffcb05;
+    font-size: 250%;
+    margin-top: .3rem;
+    margin-left: .2rem;
+}
+.label1{
+    font-family: 'poke2';
+    position: absolute;
+    padding-right: 5rem;
+    color:#3d7dca;
+    padding-top: -3rem;
+    margin-left: -5.2rem;
 }

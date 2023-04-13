@@ -1,6 +1,7 @@
 import './App.css';
 // import Formli from './components/form/login/login';
-import NAV from './components/Nav/searchbar';
+import Inicio from './components/Home/inicio' 
+import NAV from './components/Nav/navbar';
 // import Pokemons from ''; 
 // import { useState, useEffect } from 'react';
 // import { Routes, Route, useLocation, useNavigate } from 'react-router-dom';
@@ -55,6 +56,7 @@ function App() {
     <div className="App">
       <div>
         {/* <Formli/> */}
+        <Inicio/>
         <NAV/>
       </div>
     </div>

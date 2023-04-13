@@ -18,6 +18,6 @@ PokeRu.get('/{name}', HandlerPokeName);
 
 PokeRu.get('/tipos', HandlerPokeTipos);
 
-PokeRu.post('/pokenuevo', PokeNuevo);
+PokeRu.post('/', PokeNuevo);
 
 module.exports = PokeRu;

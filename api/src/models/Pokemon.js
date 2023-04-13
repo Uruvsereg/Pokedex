@@ -8,14 +8,23 @@ module.exports = (sequelize) => {
       type: DataTypes.INTEGER,
       primaryKey: true,
     },
-    name: {
+    Raza: {
       type: DataTypes.STRING,
       allowNull: false,
+      unique: true,
     },
     Imagen: {
       type: DataTypes.STRING,
       allowNull: false,
     },
+    // Tipo1: {
+    //   type: DataTypes.ta,
+    //   allowNull: false,
+    // },
+    // Tipo2: {
+    //   type: DataTypes.STRING,
+    //   allowNull: false,
+    // },
     Vida: {
       type: DataTypes.INTEGER,
       allowNull: false,
@@ -24,10 +33,18 @@ module.exports = (sequelize) => {
       type: DataTypes.INTEGER,
       allowNull: false,
     },
+    // AtaqueEspecial: {
+    //   type: DataTypes.INTEGER,
+    //   allowNull: false,
+    // },
     Defensa: {
       type: DataTypes.INTEGER,
       allowNull: false,
     },
+    // DefensaEspecial: {
+    //   type: DataTypes.INTEGER,
+    //   allowNull: false,
+    // },
     Velocidad: {
       type: DataTypes.INTEGER,
       allowNull: false,

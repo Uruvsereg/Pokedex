@@ -3,12 +3,27 @@
     flex-direction: row;
     justify-content: space-around;
     font-size: 10px;
-    height: 25px;
+    height: 5rem;
     text-align: center;
     margin-left: 100px;
-    border: 1px solid red;
+    /* border: 1px solid red; */
+    align-content: space-around;
+    align-items: center;
+    margin-top: 3em;
+    margin-left: 0;
+    background-color: #003a708c;
 }
-button{
+.button{
+    background-image: none;
     background-color: #ffcb05;
-    border: .2rem solid #3d7dca;;
+    border: .2rem solid #3d7dca;
+    height: 2rem;
+    width: 6rem;
+    border-radius: 2rem;
+}
+.label1{
+    font-family: 'poke2';
+    position: absolute;
+    padding-right: 5rem;
+    color:#3d7dca;
 }
