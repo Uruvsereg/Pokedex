@@ -11,7 +11,7 @@
     align-items: center;
     margin-top: 3em;
     margin-left: 0;
-    background-color: #003a708c;
+    background-color: #b6c7008c;
 }
 .button{
     background-image: none;
@@ -20,6 +20,11 @@
     height: 2rem;
     width: 6rem;
     border-radius: 2rem;
+    box-shadow: 0 0 1rem #003a70;
+}
+.button:hover{
+    box-shadow: 0 0 1rem red;
+    border: .2rem ridge #003a70;
 }
 .label1{
     font-family: 'poke2';

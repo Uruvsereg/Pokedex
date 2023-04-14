@@ -14,10 +14,10 @@ PokeRu.get('/', HandlerPoke);
 
 PokeRu.get('/:id', HandlerPokemon);
 
-PokeRu.get('/{name}', HandlerPokeName);
-
-PokeRu.get('/tipos', HandlerPokeTipos);
+PokeRu.get('/name?={name}', HandlerPokeName);
 
 PokeRu.post('/', PokeNuevo);
+
+PokeRu.get('/tipos', HandlerPokeTipos);
 
 module.exports = PokeRu;

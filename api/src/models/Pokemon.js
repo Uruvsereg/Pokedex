@@ -57,5 +57,10 @@ module.exports = (sequelize) => {
       type: DataTypes.FLOAT,
       allowNull: false,
     },
-  });
+    creado: {
+      type: DataTypes.BOOLEAN,
+      defaultValue: true
+    }
+  },
+  {timestamps: false});
 };

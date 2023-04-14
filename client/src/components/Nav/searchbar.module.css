@@ -20,17 +20,18 @@ button{
     background-color: #ffcb05;
     border: 0.2rem solid #3d7dca;
     border-radius: 1rem;
+    height: 1.8rem;
+    margin-bottom: 2rem;
 }
 label{
     font-family: 'poke1';
     color: #ffcb05;
-    font-size: 250%;
+    font-size: 275%;
 
 }
 .label0{
     font-family: 'poke1';
     color: #ffcb05;
-    font-size: 250%;
     margin-top: .3rem;
     margin-left: .2rem;
 }
@@ -40,5 +41,5 @@ label{
     padding-right: 5rem;
     color:#3d7dca;
     padding-top: -3rem;
-    margin-left: -5.2rem;
+    margin-left: -5.70rem;
 }

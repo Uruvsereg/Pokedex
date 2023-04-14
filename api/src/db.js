@@ -52,9 +52,8 @@ const { Pokemon, Equipo, Types, Usuarios } = sequelize.models;
 
 // Equipo.hasMany(Pokemon);
 // Pokemon.belongsToMany(Equipo);
-// Pokemon.hasMany(Types, {throught});
-// Types.belongsToMany(Pokemon, {throught});
-// Pokemon.belongsToMany(Types, {throught});
+// Types.belongsToMany(Pokemon, {throught: 'PokeTipos'});
+// Pokemon.belongsToMany(Types, {throught: 'PokeTipos'});
 // Usuarios.hasOne(Equipo);
 // Equipo.belongsTo(Usuarios);
 

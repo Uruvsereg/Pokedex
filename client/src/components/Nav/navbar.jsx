@@ -11,9 +11,9 @@ const NAV = ({onSearch}) => {
                 <button><Link to='/pokedex'></Link></button>
                 <button><Link to='/about'>Info</Link></button> */}
                 <button className={style.button}>Inicio</button>
-                <button className={style.button}></button>
+                <button className={style.button}>Perfil</button>
                 <SearchBar onSearch={onSearch} className={style.bn}/>
-                <button className={style.button}></button>
+                <button className={style.button}>PokeNuevo</button>
                 <button className={style.button}>Salir</button>
                 {/* <button><Link to='/perfil'></Link></button>
                 <button><Link to='/'>Salir</Link></button> */}
