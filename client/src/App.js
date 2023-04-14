@@ -1,8 +1,10 @@
 import './App.css';
+// import react from 'react';
 // import Formli from './components/form/login/login';
-import Inicio from './components/Home/inicio' 
+import Inicio from './components/Principales/Home/inicio' 
 import NAV from './components/Nav/navbar';
-// import Pokemons from ''; 
+// import Creacion from './components/Principales/Pokreacion/Pokrea';
+import Footer from './components/footer/footer';
 // import { useState, useEffect } from 'react';
 // import { Routes, Route, useLocation, useNavigate } from 'react-router-dom';
 
@@ -58,9 +60,13 @@ function App() {
         {/* <Formli/> */}
         <Inicio/>
         <NAV/>
+        {/* <Creacion/> */}
+      </div>
+      <div>
+        <Footer/>
       </div>
     </div>
-  );
+  )
 }
 
 export default App;

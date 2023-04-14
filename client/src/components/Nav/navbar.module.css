@@ -11,7 +11,7 @@
     align-items: center;
     margin-top: 3em;
     margin-left: 0;
-    background-color: #b6c7008c;
+    background: linear-gradient(to bottom right, rgba(255, 0, 0, 0.6), black, rgba(255, 255, 255, 0.6));
 }
 .button{
     background-image: none;
