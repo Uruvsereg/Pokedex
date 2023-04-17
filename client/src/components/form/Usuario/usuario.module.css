@@ -1,3 +1,100 @@
+@font-face {
+    font-family: 'poke1';
+    src: url('../../../fonts/PokemonSolid.ttf');
+}
+@font-face {
+    font-family: 'poke2';
+    src: url('../../../fonts/Pokemon\ Hollow.ttf');
+}
 :root{
-    background-image: url('../../../Multimedia/IMG/y7DjPW.png');
+    background-image: url('../../../Multimedia/IMG/legendarios.png');
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+.ing{
+    width: 70rem;
+    height: 600px;
+    display: grid;
+    margin-left: 1rem;
+    align-items:flex-start;
+    justify-content: flex-start;
+    /* border: 1px solid red; */
+}
+.loginu{
+    width: 34rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.ing label::first-letter{
+    font-size: 100%;
+    font-family: 'poke1';
+}
+.label1{
+    font-size: 2em;
+    font-family: 'poke1';
+    color: #ffcb05;
+
+}
+.label2{
+    font-size: 2em;
+    font-family: 'poke2';
+    position: absolute;
+    margin-left: -10.82rem;
+    color:#3d7dca;
+}
+.lue{
+    background-color: #ffcb05;
+    height: 1.3rem;
+    width: 10rem;
+    border: .3rem solid #3d7dca;
+    border-radius: 1.5rem;
+    color:#003a70;
+}
+.user{
+    width: 42rem;
+    height: 4rem;
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.user1{
+    width: 42rem;
+    height: 4rem;
+    margin-left: .8rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.pas{
+    width: 23rem;
+    height: 4rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.paco{
+    width: 33rem;
+    height: 4rem;
+    display: flex;
+    flex-direction: row;
+}
+button{
+    width: 6rem;
+    height: 2rem;
+    background-color: #ffcb05;
+    color:#003a70;
+    cursor: pointer;
+    font-weight: bold;
+    border: .2rem solid #3d7dca;
+    border-radius: 1rem;
+}
+button:active{
+    transform: scale(0.9);
+}
+.es{
+    height: 3rem;
+    border: .1rem solid transparent;
 }

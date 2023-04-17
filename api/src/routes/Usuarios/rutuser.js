@@ -8,14 +8,12 @@ const RutUs = Router();
 // RutUs.use('get',GetUsu);
 // RutUs.use('post',PostUsu);
 
-RutUs.get('/', HandleGetUsu);
-
 RutUs.get('/:id', HandlerGetUs);
 
 RutUs.get('/:id/equipo', HandlerGetTeam);
 
 RutUs.get('/:id/carnet', HandlerGetCard);
 
-RutUs.post('/', NuevoUsuHandler);
+RutUs.post('/registro', NuevoUsuHandler);
 
 module.exports = RutUs;

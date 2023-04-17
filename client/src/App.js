@@ -1,17 +1,20 @@
 import './App.css';
 // import react from 'react';
+// import FormNu from './components/form/Usuario/usuario';
 // import Formli from './components/form/login/login';
-import Inicio from './components/Principales/Home/inicio' 
-import NAV from './components/Nav/navbar';
+import FormNu from './components/form/Usuario/usuario';
+// import Inicio from './components/Principales/Home/inicio';
+// import NAV from './components/Nav/navbar';
+// import PokeBarra from './components/Borders/Poke/Poke';
 // import Creacion from './components/Principales/Pokreacion/Pokrea';
 import Footer from './components/footer/footer';
 // import { useState, useEffect } from 'react';
-// import { Routes, Route, useLocation, useNavigate } from 'react-router-dom';
+ import { BrowserRouter, Route/*, BrowserRouter/*, useLocation/*, useNavigate*/ } from 'react-router-dom';
 
-// function App() {
+function App() {
   // const location = useLocation();
   // const Navigate = useNavigate();
-//   const [pokemons, SetPokemons] = useState([]);
+  // const [pokemons, SetPokemons] = useState([]);
   // const [access, setAccess] = useState(false);
 
   // const nickname = 'urvsereg';
@@ -28,20 +31,20 @@ import Footer from './components/footer/footer';
   //   !access && Navigate('/')
   // },[access,Navigate])
 
-//   const onSearch = (pokemon) => {
-//     fetch(`http://localhost:3001/pokemon/onsearch/${pokemon}`)
-//     .then((response) => response.json())
-//     .then((data) =>{
-//       console.log(data);
-//       if(data.id){
-//         SetPokemons((oldPokes) => [...oldPokes, data]);
-//       }
-//       else{
-//         alert('No existeun pokemon con ese id')
-//       }
-//     })
-//     .catch(err => console.log(err))
-//   }
+  const onSearch = (pokemon) => {
+    fetch(`http://localhost:3001/pokemon/onsearch/${pokemon}`)
+    .then((response) => response.json())
+    .then((data) =>{
+      console.log(data);
+      if(data.id){
+        SetPokemons((oldPokes) => [...oldPokes, data]);
+      }
+      else{
+        alert('No existeun pokemon con ese id')
+      }
+    })
+    .catch(err => console.log(err))
+  }
 
 //   const onClose = (id) => {
 //     SetPokemons(
@@ -53,19 +56,21 @@ import Footer from './components/footer/footer';
 
 // export default App;
 
-function App() {
   return (
-    <div className="App">
-      <div>
-        {/* <Formli/> */}
-        <Inicio/>
-        <NAV/>
-        {/* <Creacion/> */}
+    <BrowserRouter>
+      <div className="App">
+        {/* {location.pathname==='/'?<Formli/>:<PokeBarra/>} */}
+        {/* <Route path={`/`} componenet={<Formli/>}/> */}
+        {/* <Route path={`/inicio`} component={<Inicio onSearch={onSearch}/>}/> */}
+        {/* <Route path={`pokemons/pokenuevo`} compkconent = {<Creacion/>}/> */}
+        {/* <Route path = {`/perfil/${id}`} component = {<Usuario/>}/> */}
+        {/* <Route path={`/perfil/registro`} component={<FormNu/>}/> */}
+        <FormNu/>
+          <div>
+            <Footer/>
+          </div>
       </div>
-      <div>
-        <Footer/>
-      </div>
-    </div>
+    </BrowserRouter>
   )
 }
 

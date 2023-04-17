@@ -6,19 +6,67 @@
     font-family: 'poke2';
     src: url('../../../fonts/Pokemon\ Hollow.ttf');
 }
+@keyframes pktipos {
+    0%{
+        background-position: 0 0;
+    }
+    50%{
+        background-position: 400% 0;
+    }
+    100%{
+        background-position: 0 0;
+    }
+}
 /* .poke1{
     font-family: 'poke1';
 } */
 :root{
     background-image: url('../../../Multimedia/IMG/inicialesG1.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+.ingreso{
+    align-items: normal;
+}
+.reg{
+    margin-top: 2%;
+    margin-left: 40%;
+    width: 24rem;
+    height: 5rem;
+}
+.reg button{
+    padding-top:.5rem;
+    background: black;
+    cursor: pointer;
+    border: none;
+    padding: 1rem 2rem;
+    color:#ffffff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    position: relative;
+    border-radius: .75rem;
+}
+.reg button::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg,#458B95ff, #1C4B27ff, #9C2B2Fff, #E3E22Bff, #1553E0ff, #87D3F5ff, #A52A6Cff, #5F2C89ff, #AA1F25ff, #010100ff);
+    background-size: 800%;
+    border-radius: .7rem;
+    filter:blur(.5rem);
+    animation: pktipos 30s linear infinite;
 }
 h1::first-letter{
     font-size: 100%;
     font-family: 'poke1';
 }
 .ing{
-    /* font-family: 'poke1';
-    color: #ffcb05; */
+    align-items: center;
 }
 label{
     font-size: 2em;
@@ -31,19 +79,42 @@ label{
     padding-right: 5rem;
     color:#3d7dca;
 }
-.loginp{
-
-}
-.logp{
-
-}
 .bot button{
-    height: 12.13rem;
-    width: 12.13rem;
+    margin-top: 7rem;
+    height: 3.9rem;
+    width: 3.9rem;
     border: 0 solid transparent ;
-    background: url(../../../Multimedia/IMG/POKEDADO.png);
+    background: black;
     /* background-size: cover; */   
     background-position: center center;
     /* background-attachment: fixed; */
     background-repeat: no-repeat;
+    border: .01rem solid red;
+    border-radius: 2rem;
+    cursor: pointer;
+    position: relative;
 }
+
+.bot button:hover{
+    top: 0;
+    left: 0;
+    border-radius: 2rem;
+    background: url(../../../Multimedia/IMG/POKEDADO.png);
+    background-position: center center;
+}
+
+/*
+.reg button::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg,#458B95ff, #1C4B27ff, #9C2B2Fff, #E3E22Bff, #1553E0ff, #87D3F5ff, #A52A6Cff, #5F2C89ff, #AA1F25ff, #010100ff);
+    background-size: 800%;
+    border-radius: .7rem;
+    filter:blur(.5rem);
+    animation: pktipos 30s linear infinite;
+} */

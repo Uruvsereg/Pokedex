@@ -17,14 +17,14 @@ module.exports = (sequelize) => {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    // Tipo1: {
-    //   type: DataTypes.ta,
-    //   allowNull: false,
-    // },
-    // Tipo2: {
-    //   type: DataTypes.STRING,
-    //   allowNull: false,
-    // },
+    Tipo1: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    Tipo2: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
     Vida: {
       type: DataTypes.INTEGER,
       allowNull: false,

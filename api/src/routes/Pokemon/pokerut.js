@@ -16,7 +16,7 @@ PokeRu.get('/:id', HandlerPokemon);
 
 PokeRu.get('/name?={name}', HandlerPokeName);
 
-PokeRu.post('/', PokeNuevo);
+PokeRu.post('/pokenuevo', PokeNuevo);
 
 PokeRu.get('/tipos', HandlerPokeTipos);
 

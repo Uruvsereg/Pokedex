@@ -2,12 +2,15 @@ require('./db.js');
 const express = require('express');
 const cookieParser = require('cookie-parser');
 const morgan = require('morgan');
+const cors = require ('cors');
 const bodyParser = require('body-parser');
 const routes = require('./routes/index.js');
 
 const server = express();
 
 server.name = 'API';
+
+server.use(cors());
 
 //configuración para evitar duplicar headers
 server.use(bodyParser.urlencoded({ extended: true, limit: '50mb' }));

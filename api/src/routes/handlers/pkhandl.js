@@ -3,7 +3,7 @@ const { PokeNew, getTipos, PokeID, BuscaNombres, getPokemons } = require('../../
 //arreglo de objetos, pokemon con su info
 const HandlerPoke = async (_req, res) => {
     try {
-        const response = await getPokemons()
+        const response = await getPokemons();
         res.status(200).json(response);
     }
     catch (error) {

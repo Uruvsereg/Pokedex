@@ -1,0 +1,8 @@
+.barraP{
+    position: fixed;
+    bottom: 3rem;
+    top: 6.9rem;
+    right: 0;
+    background-color: #3d7ccabf;
+    width: 20rem;
+}

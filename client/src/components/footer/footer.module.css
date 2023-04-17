@@ -10,6 +10,24 @@
     height: 3rem;
     background-color: #b6c7008c;
 }
-.a{
-    color: #ffcb05;
+.a1{
+    width: 1.5rem;
+    height: 1.5rem;
+    background-image: url(../../Multimedia/IMG/henry.jpg);
+    background-size: cover;
+    border-radius: 0.8rem;
+}
+.a2{
+    width: 1.5rem;
+    height: 1.5rem;
+    background-image: url(../../Multimedia/IMG/linkedin.png);
+    background-size: cover;
+}
+.a3{
+    width: 1.5rem;
+    height: 1.5rem;
+    background-image: url(../../Multimedia/IMG/twitter.png);
+    background-size: cover;
+    border-radius: 0.8rem;
+
 }

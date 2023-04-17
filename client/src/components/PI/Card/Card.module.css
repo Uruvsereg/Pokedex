@@ -1,0 +1,38 @@
+.dimensiones{
+    height: 20rem;
+    width: 8rem;
+}
+.fondo{
+    height: 12rem;
+    width: 8rem;
+    border-radius: 1.75rem;
+    border: .75rem solid black;
+    background: linear-gradient( rgba(255, 0, 0, 0.6), rgba(255, 0, 0, 0.3), black, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.6));
+    /* display: grid; */
+    margin-left: .25rem;
+    margin-top: 1.5rem;
+}
+h1{
+    font-size: 1rem;
+}
+.nom{
+    margin-top: .25rem;
+    height: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.img{
+    height: 6.5rem;
+    width: 6.5rem;
+    margin-top: .5rem;
+    margin-left: .55rem;
+    image-rendering: auto;
+}
+.PT{
+    margin-top:-.5rem;
+    height: 3rem;
+    display:grid;
+    grid-template-rows: repeat(auto-fill, minmax(1.05rem, 1.15rem));
+    flex-direction: row;
+}
