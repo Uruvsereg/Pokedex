@@ -1,12 +1,9 @@
 const {Router} = require('express');
 // const GetUsu = require('./getusu');
 // const PostUsu = require('./postusu');
-const {HandlerGetUs, HandleGetUsu, HandlerGetTeam, HandlerGetCard, NuevoUsuHandler} = require('../handlers/ushandl');
+const {HandlerGetUs, HandlerGetTeam, HandlerGetCard, NuevoUsuHandler} = require('../handlers/ushandl');
 
 const RutUs = Router();
-
-// RutUs.use('get',GetUsu);
-// RutUs.use('post',PostUsu);
 
 RutUs.get('/:id', HandlerGetUs);
 

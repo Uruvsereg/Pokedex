@@ -4,15 +4,15 @@ import './index.css';
 import store from './redux/store';
 import { Provider } from 'react-redux';
 import App from './App';
-import { BrowserRouter } from 'react-router-dom';
+// import { BrowserRouter } from 'react-router-dom';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
     <Provider store = { store }>
-      <BrowserRouter> 
+      {/* <BrowserRouter>  */}
         <App />
-      </BrowserRouter>,
+      {/* </BrowserRouter>, */}
     </Provider>,
   </React.StrictMode>,
   document.getElementById('root')

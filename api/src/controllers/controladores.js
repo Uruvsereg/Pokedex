@@ -81,7 +81,8 @@ const getPokemons = async () => { //listo
 }
 
 const PokeID = async (id, lugar) => {// CASI LISTO
-    const PKMon = (lugar === 'api') ? (await axios.get(`https://pokeapi.co/api/v2/pokemon/${id}`)) : await Pokemon.findByPK(id);
+    const PKMon = (lugar === 'api') ? (await axios.get(`https://pokeapi.co/api/v2/pokemon/${id}`)) : 
+        await Pokemon.findByPK(id);
     const dataP = PKMon.data;
     const PokemoN = {
         id: dataP.id,
@@ -108,18 +109,29 @@ const PokeID = async (id, lugar) => {// CASI LISTO
 }
 
 const BuscaNombres = async (name) => {
-    const nombres = (await axios.get(`https://pokeapi.co/api/v2/pokemon`)).data
-    const Pokefil = PKMbase(nombres)
-    const PokefiltroApi = Pokefil.filter(pokemon => pokemon.name === name)
-    // const PKMnombre = PKM(nombres);
-    // const pokeFapi = PKMnombre.filter(pokemon => pokemon.name === nombre);
-    // const pokeFbd = await Pokemon.findAll({where: {raza: nombre}});
-    // const pokefiltro = [...pokeFapi,...pokeFbd]
-    return PokefiltroApi;
+    const nombres = await axios.get(`https://pokeapi.co/api/v2/pokemon/${name}`);
+    const dataP = nombres.data;
+    const PokemoN = {
+        id: dataP.id,
+        raza: dataP.name,
+        Imagen: dataP.sprites.front_default,
+        Tipo1: dataP.types[0].type.name.charAt(0).toUpperCase()+dataP.types[0].type.name.slice(1),
+        Tipo2: dataP.types[1]?.type.name.charAt(0).toUpperCase()+dataP.types[1]?.type.name.slice(1),
+        Vida: dataP.stats.find(({stat}) => stat.name === "hp").base_stat,
+        Ataque: dataP.stats.find(({stat}) => stat.name === "attack").base_stat,
+        AtEsp: dataP.stats.find(({stat}) => stat.name === "special-attack").base_stat,
+        Defensa: dataP.stats.find(({stat}) => stat.name === "defense").base_stat,
+        DeEsp: dataP.stats.find(({stat}) => stat.name === "special-defense").base_stat,
+        Velocidad: dataP.stats.find(({stat}) => stat.name === "speed").base_stat,
+        Altura: dataP.height,
+        Peso: dataP.weight
+    };
+    const pokemon = PokemoN.filter(pokemon => pokemon.name === name).data
+    return pokemon;
 }
 
-const PokeNew = async(id, Raza, Imagen, /*Tipo1, Tipo2,*/ Vida, Ataque, Defensa, Velocidad, Altura, Peso) => {
-    return await Pokemon.create({id, Raza, Imagen, /*Tipo1, Tipo2,*/ Vida, Ataque, Defensa, Velocidad, Altura, Peso});
+const PokeNew = async(id , Raza , Imagen , Tipo1 , Tipo2 , Vida , Ataque , AtaqueEspecial , Defensa , DefensaEspecial , Velocidad , Altura , Peso) => {
+    return await Pokemon.create({id , Raza , Imagen , Tipo1 , Tipo2 , Vida , Ataque , AtaqueEspecial , Defensa , DefensaEspecial , Velocidad , Altura , Peso});
 };
 
 const getTipos = async () => {

@@ -1,8 +1,6 @@
-const { DataTypes } = require('sequelize');
-// Exportamos una funcion que define el modelo
-// Luego le injectamos la conexion a sequelize.
+const { DataTypes } = require('sequelize');// Exportamos una funcion que define el modelo, Luego le injectamos la conexion a sequelize.
+
 module.exports = (sequelize) => {
-  // defino el modelo
   sequelize.define('pokemon', {
     id: {
       type: DataTypes.INTEGER,
@@ -23,7 +21,7 @@ module.exports = (sequelize) => {
     },
     Tipo2: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
     },
     Vida: {
       type: DataTypes.INTEGER,
@@ -33,18 +31,18 @@ module.exports = (sequelize) => {
       type: DataTypes.INTEGER,
       allowNull: false,
     },
-    // AtaqueEspecial: {
-    //   type: DataTypes.INTEGER,
-    //   allowNull: false,
-    // },
+    AtaqueEspecial: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
     Defensa: {
       type: DataTypes.INTEGER,
       allowNull: false,
     },
-    // DefensaEspecial: {
-    //   type: DataTypes.INTEGER,
-    //   allowNull: false,
-    // },
+    DefensaEspecial: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
     Velocidad: {
       type: DataTypes.INTEGER,
       allowNull: false,

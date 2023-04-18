@@ -6,15 +6,9 @@ const { HandlerPoke, HandlerPokemon, HandlerPokeName, HandlerPokeTipos, PokeNuev
 
 const PokeRu = Router();
 
-// PokeRu.use('/get',PokeGet);
-// PokeRu.use('/post',PokePost);
-// PokeRu.use('/put',PokePut);
-
 PokeRu.get('/', HandlerPoke);
 
 PokeRu.get('/:id', HandlerPokemon);
-
-PokeRu.get('/name?={name}', HandlerPokeName);
 
 PokeRu.post('/pokenuevo', PokeNuevo);
 

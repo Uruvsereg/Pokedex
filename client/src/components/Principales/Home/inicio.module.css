@@ -1,5 +1,5 @@
 :root{
-    background-image: url('../../../Multimedia/IMG/fondo\ seleccion.jpg');
+    background: url('../../../Multimedia/IMG/fondo\ seleccion.jpg');
     background-size: cover;
     background-position: center center;
     background-attachment: fixed;

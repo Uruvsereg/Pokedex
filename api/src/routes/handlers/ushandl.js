@@ -12,8 +12,6 @@ const NuevoUsuHandler = async(req, res) => {
         res.status(404).json({error:error.message})
     }
 }
-
-
 //ruta de perfil específico
 const HandlerGetUs = (req, res) => {
     const {id} = req.params;

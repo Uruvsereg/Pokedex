@@ -1,4 +1,4 @@
-import { agregar/*, getPokemon/*, getPokemons/*, getXNombre/*, getTipos/*, addEquipo/*, delEquipo/*, Filtro/*, Orden*/ } from "./acciones";
+import { agregar, getXNombre/*, getPokemon/*, getPokemons/*, getTipos/*, addEquipo/*, delEquipo/*, Filtro/*, Orden*/ } from "./acciones";
 import axios from 'axios'
 
 export const ADD = () => {
@@ -16,9 +16,10 @@ export const ADD = () => {
 //     return {type:getPokemons, payload: pokemon}
 // }
 
-// export const PKMN = (pokemon) => {
-//     return {type:getXNombre, payload: pokemon}
-// }
+export const PKMN = async (name) => {
+    const response = await axios(`http://localhost:3001/pokemons/?name=${name}`)
+    return {type:getXNombre, payload: response.data}
+}
 
 // export const PKMTIPOS = (pokemon) => {
 //     return {type:getTipos, payload: pokemon}

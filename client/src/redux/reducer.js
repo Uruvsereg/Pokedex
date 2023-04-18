@@ -1,5 +1,5 @@
-import { ADD, 
-    // GETPKM, POKEALL, PKMN, PKNTIPOS, HITEAM, BYETEAM, FILTRO, ORGANIZA 
+import { ADD, PKMN
+    // GETPKM, POKEALL, PKNTIPOS, HITEAM, BYETEAM, FILTRO, ORGANIZA 
 } from "./actions";
 
 const initialState={
@@ -17,15 +17,16 @@ const reducer = (state = initialState, action) => {
                 ...state,
                 PokeAll: [...PokeAll, action.payload],
             }
+        case PKMN:
+            return{
+                ...state,
+                PokeAll: action.payload,
+            }
         // case GETPKM:
         //     return{
         //         ...state,
         //     }
         // case POKEALL:
-        //     return{
-        //         ...state,
-        //     }
-        // case PKMN:
         //     return{
         //         ...state,
         //     }

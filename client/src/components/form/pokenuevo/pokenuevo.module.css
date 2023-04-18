@@ -1,0 +1,47 @@
+@font-face {
+    font-family: 'poke1';
+    src: url('../../../fonts/PokemonSolid.ttf');
+}
+@font-face {
+    font-family: 'poke2';
+    src: url('../../../fonts/Pokemon\ Hollow.ttf');
+}
+:root{
+    background: url('../../../Multimedia/IMG/lab.png');
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+.ing{
+    width: 35rem;
+    height: 45rem;
+    display: grid;
+    margin-left: 1rem;
+    align-items:center;
+    justify-content: center;
+}
+.carac{
+    width: 34rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.label0{
+    font-size: 2em;
+    font-family: 'poke2';
+    position: absolute;
+    margin-top: .1rem;
+    margin-left: -10.6rem;
+    color:#3d7dca;
+}
+.label1{
+    font-size: 2em;
+    font-family: 'poke1';
+    color: #ffcb05;
+
+}
+.label1::first-letter{
+    font-size: 100%;
+    font-family: 'poke1';
+}

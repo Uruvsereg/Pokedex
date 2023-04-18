@@ -1,4 +1,6 @@
 import style from './Card.module.css';
+import {Link} from 'react-router-dom';
+
 
 const Card = ({elemento}) => {
     // const PokemoN = {
@@ -20,14 +22,16 @@ const Card = ({elemento}) => {
     return (
         <div className={style.fondo}>
             <div className={style.nom}>
-                <h1>Raza: {raza}</h1><p>{id}</p>
+                <h1>{raza}</h1><p>{id}</p>
             </div>
-            <div className={style.img}>
-                <img src={Image}/>
-            </div>
+            <Link to={`/pokemon/${id}`}>
+                <div className={style.img}>
+                    <img src={Image}/>
+                </div>
+            </Link>
             <div className={style.PT}>
-                <p>Tipo1: {Tipo1}</p>
-                <p>Tipo2: {Tipo2}</p>
+                <p>{Tipo1}</p>
+                <p>{Tipo2}</p>
             </div>
         </div>
     )

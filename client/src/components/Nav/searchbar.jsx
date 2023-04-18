@@ -12,8 +12,8 @@ function SearchBar({onSearch, handleChange, handleSubmit}) {
 
     return (
         <div className={style.sb}>
-            <input type='search' /*value={pokemon}*/ handleSubmit={handleSubmit} handleChange={handleChange} /*onKeyDown={handleKeyPress}*/ className={style.bus}/>
-            <button onClick={onSearch} className={style.bot}/>
+            <input type='search' /*value={pokemon}*/ handleChange={handleChange} /*onKeyDown={handleKeyPress}*/ className={style.bus}/>
+            <button type='submit' onClick={onSearch} handleSubmit={handleSubmit} className={style.bot}/>
             <label className={style.label1}>Buscar</label>
             <label className={style.label0}>←Buscar</label>
         </div>
