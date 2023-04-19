@@ -36,3 +36,19 @@
     transform: rotate(360deg);
   }
 }
+
+.landing{
+}
+.registro{
+}
+.inicio{
+  background: url('./Multimedia/IMG/fondo\ seleccion.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+.pokenuevo{
+}
+.perfil{
+}

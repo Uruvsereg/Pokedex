@@ -6,6 +6,10 @@ const Cards = ({Poketodos}) => {
     return (
         <div className={style.dimen}>
             { Pokes?.map((elemento) => ( <Card elemento={elemento}/>)) }
+            <Card></Card>
+            <Card></Card>
+            <Card></Card>
+            <Card></Card>
         </div>
     )
 }

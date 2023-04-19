@@ -1,7 +1,6 @@
-export const agregar = "agregar";
-export const getPokemon = "getPokemon";
 export const getPokemons = "getPokemons";
 export const getXNombre = "getXNombre";
+export const getPokedetalle = "getPokemon";
 export const getTipos = "getTipos";
 export const addEquipo = "addEquipo";
 export const delEquipo = "delEquipo";

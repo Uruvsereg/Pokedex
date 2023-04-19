@@ -2,17 +2,19 @@ import { useDispatch, useSelector } from "react-redux";
 import { useEffect, useState } from 'react';
 import style from './inicio.module.css';
 import NAV from '../../Nav/navbar';
-import { ADD, PKMN } from "../../../redux/actions";
+import {reducer} from '../../../redux/reducer';
 import Cards from '../../PI/Cards/Cards'
+import PokeBarra from '../../Borders/Poke/Poke';
+import BarraUser from '../../Borders/User/User';
 
 const Inicio=({onSearch})=> {
     const dispatch = useDispatch();
-    const Poketodos = useSelector((state) => state.Poketodos);
+    const Poketodos = useSelector((state) => state.PokeAll);
     const [buscaNombre, setBuscaNombre] = useState('');
     // const [filtro, setFiltros] = useState(PoketodosC);
 
     useEffect(() => {
-        dispatch(ADD())
+        dispatch(PokeAll())
         // return (() =>{
         //     clearDispatch();
         // })
@@ -27,7 +29,7 @@ const Inicio=({onSearch})=> {
         event.preventDefault();
         // const filtro = Poketodos.filter(Pokemon => Pokemon.name.includes(buscaNombre));
         // setFiltros(filtro);
-        // // login(userData);
+        // login(userData);
         dispatch(PKMN(buscaNombre))
     }
 
@@ -40,6 +42,10 @@ const Inicio=({onSearch})=> {
                 <Cards Poketodos = {Poketodos}/>
             </div>
             <div className={style.poke}>
+                <PokeBarra/>
+            </div>
+            <div className={style.User}>
+                <BarraUser/>
             </div>
         </div>
     )

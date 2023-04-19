@@ -17,22 +17,25 @@
         background-position: 0 0;
     }
 }
-/* .poke1{
-    font-family: 'poke1';
-} */
 :root{
     background-image: url('../../../Multimedia/IMG/inicialesG1.jpg');
     background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
 }
+.pag{
+    display: grid;
+    align-items: center;
+}
 .ingreso{
     align-items: normal;
 }
 .reg{
-    margin-top: 2%;
-    margin-left: 40%;
-    width: 24rem;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    margin-left: 42rem;
+    width: 19rem;
     height: 5rem;
 }
 .reg button{
@@ -67,6 +70,8 @@ h1::first-letter{
 }
 .ing{
     align-items: center;
+    width: 40rem;
+    margin-left: 32rem;
 }
 label{
     font-size: 2em;
@@ -78,6 +83,18 @@ label{
     position: absolute;
     padding-right: 5rem;
     color:#3d7dca;
+}
+.inv{
+    display: grid;
+    align-items: center;
+    width: 4rem;
+    height: 3rem;
+    margin-left: 49.3rem;
+}
+.bot{
+    display: grid;
+    align-items: center;
+    margin-left: 49.5rem;
 }
 .bot button{
     margin-top: 7rem;
@@ -94,7 +111,6 @@ label{
     cursor: pointer;
     position: relative;
 }
-
 .bot button:hover{
     top: 0;
     left: 0;

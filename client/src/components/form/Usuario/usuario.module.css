@@ -6,7 +6,7 @@
     font-family: 'poke2';
     src: url('../../../fonts/Pokemon\ Hollow.ttf');
 }
-:root{
+.f{
     background: url('../../../Multimedia/IMG/legendarios.png');
     background-size: cover;
     background-attachment: fixed;

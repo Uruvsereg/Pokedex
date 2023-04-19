@@ -1,11 +1,12 @@
 .dimen{
-    height: 65rem;
-    width: 20rem;
+    height: 44rem;
+    width: 69rem;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(8rem, 9rem));
     grid-template-rows: repeat(auto-fill, minmax(13rem, 15rem));
     grid-gap: 1rem;
     position:absolute;
     margin-top:0px;
-    margin-left:0px;
+    margin-left:20rem;
+    border: 1px solid red;
 }

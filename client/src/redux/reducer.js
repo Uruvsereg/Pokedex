@@ -1,39 +1,36 @@
-import { ADD, PKMN
-    // GETPKM, POKEALL, PKNTIPOS, HITEAM, BYETEAM, FILTRO, ORGANIZA 
+import { POKEALL, PKMN, GETPKM, PKMTIPOS
+    //, HITEAM, BYETEAM, FILTRO, ORGANIZA 
 } from "./actions";
 
 const initialState={
     Usuarios:[],
     PokeAll:[],
-    pokedetalle: [],
-    
+    Pokedetalle: [],
+    PoKeTipos: []
 }
 
 const reducer = (state = initialState, action) => {
-    const {PokeAll} = state;
     switch(action.type){
-        case ADD:
+        case POKEALL:
             return{
                 ...state,
-                PokeAll: [...PokeAll, action.payload],
+                PokeAll: action.payload,
             }
         case PKMN:
             return{
                 ...state,
                 PokeAll: action.payload,
             }
-        // case GETPKM:
-        //     return{
-        //         ...state,
-        //     }
-        // case POKEALL:
-        //     return{
-        //         ...state,
-        //     }
-        // case PKNTIPOS:
-        //     return{
-        //         ...state,
-        //     }
+        case GETPKM:
+            return{
+                ...state,
+                PokeAll: action.payload,
+            }
+        case PKMTIPOS:
+            return{
+                ...state,
+                poKeTipos: action.payload
+            }
         // case HITEAM:
         //     return{
         //         ...state,
@@ -51,7 +48,7 @@ const reducer = (state = initialState, action) => {
         //         ...state,
         //     }
         default:
-            return {...state}
+            return state
     }
 }
 

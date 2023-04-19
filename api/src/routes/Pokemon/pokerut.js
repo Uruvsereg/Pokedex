@@ -1,8 +1,5 @@
 const {Router} = require('express');
-// const PokePut = require('./PokePut');
-// const PokeGet = require('./PokeGet');
-// const PokePost = require('./PokePost');
-const { HandlerPoke, HandlerPokemon, HandlerPokeName, HandlerPokeTipos, PokeNuevo} = require('../handlers/pkhandl');
+const { HandlerPoke, HandlerPokemon, HandlerPokeTipos, PokeNuevo} = require('../handlers/pkhandl');
 
 const PokeRu = Router();
 

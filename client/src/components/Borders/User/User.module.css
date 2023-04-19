@@ -1,0 +1,9 @@
+.barraU{
+    position: fixed;
+    bottom: 3rem;
+    top: 6.9rem;
+    left: 0;
+    background-color: #003a70b6;
+    width: 20rem;
+    color: #ffcb05;
+}

@@ -2,34 +2,25 @@ import style from './Card.module.css';
 import {Link} from 'react-router-dom';
 
 
+
 const Card = ({elemento}) => {
-    // const PokemoN = {
-    //     id: dataP.id,
-    //     raza: dataP.name,
-    //     Imagen: dataP.sprites.front_default,
-    //     Tipo1: dataP.types[0].type.name.charAt(0).toUpperCase()+dataP.types[0].type.name.slice(1),
-    //     Tipo2: dataP.types[1]?.type.name.charAt(0).toUpperCase()+dataP.types[1]?.type.name.slice(1),
-    //     Vida: dataP.stats.find(({stat}) => stat.name === "hp").base_stat,
-    //     Ataque: dataP.stats.find(({stat}) => stat.name === "attack").base_stat,
-    //     AtEsp: dataP.stats.find(({stat}) => stat.name === "special-attack").base_stat,
-    //     Defensa: dataP.stats.find(({stat}) => stat.name === "defense").base_stat,
-    //     DeEsp: dataP.stats.find(({stat}) => stat.name === "special-defense").base_stat,
-    //     Velocidad: dataP.stats.find(({stat}) => stat.name === "speed").base_stat,
-    //     Altura: dataP.height,
-    //     Peso: dataP.weight
-    // };
-    const { id, raza, Image, Tipo1, Tipo2 } = elemento;
+    // const Charizard = src('../../../Multimedia/IMG/pokemones/006.png')
+    const { id, raza, Image, Tipo1, Tipo2 } = elemento; 
     return (
         <div className={style.fondo}>
             <div className={style.nom}>
+                {/* <h1>charizard</h1><p>6</p> */}
                 <h1>{raza}</h1><p>{id}</p>
             </div>
             <Link to={`/pokemon/${id}`}>
                 <div className={style.img}>
+                    {/* <img src={(Charizard)}/> */}
                     <img src={Image}/>
                 </div>
             </Link>
             <div className={style.PT}>
+                {/* <p>Dragón</p>
+                <p>Fuego</p> */}
                 <p>{Tipo1}</p>
                 <p>{Tipo2}</p>
             </div>

@@ -4,12 +4,15 @@ import validation from "./validations";
 import { Link } from 'react-router-dom';
 
 const Formli=({login})=>{
-    const [userData,setUserData]=useState({ 
-        username:'',
+    const [userData, setUserData]=useState({
+        nombre:'',
+        apellido:'',
+        correo:'',
+        nickname:'',
         password:''
     });
 
-    const handleInputChange=(event)=>{
+    const handleInputChange = (event) => {
         setUserData({
             ...userData,
             [event.target.name]: event.target.value
@@ -22,7 +25,7 @@ const Formli=({login})=>{
         )
     }
 
-    const handleSubmit=(event)=>{
+    const handleSubmit = (event) => {
         event.preventDefault();
         login(userData);
     }
@@ -33,7 +36,7 @@ const Formli=({login})=>{
     });
 
     return(
-        <div>
+        <div className={style.pag}>
             <form onSubmit={handleSubmit}>
                 <div className={style.ing}>
                     <div className={style.loginu}>
@@ -53,10 +56,10 @@ const Formli=({login})=>{
                     <div className={style.reg}>
                         <button><Link to='/perfil/registro'>Registro</Link></button>
                     </div>
-                    <div>
+                </div>
+                    <div className={style.inv}>
                         <button><Link to='/inicio'>Invitado</Link></button>
                     </div>
-                </div>
                 <div className={style.bot}>
                     <button><Link to='/inicio'></Link></button>
                 </div>

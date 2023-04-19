@@ -33,7 +33,7 @@ const Formli=({login})=>{
     // });
 
     return(
-        <div>
+        <div className={style.f}>
             <form onSubmit={handleSubmit}>
                 <div className={style.ing}>
                     <div className={style.carac}>{/*Pokemon.includes(raza) ? throw new Error : */}
