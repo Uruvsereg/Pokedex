@@ -14,7 +14,7 @@
     background-repeat: no-repeat;
 }
 .pokemon{
-    height: 44rem;
+    height: 38rem;
     width: 69rem;
     display: grid;
     flex-direction: row;
@@ -22,38 +22,59 @@
     justify-content: center;
     margin-left: 20rem;
     position: absolute;
-    border: 1px solid red;
 }
 .pokeraza{
     top:0;
     margin-left: 20rem;
     height: 6rem;
     width: 69rem;
-    border: 1px solid rgb(18, 212, 154);
+    display: grid;
+    align-items: center;
+    justify-content: center;
 }
 .pokemon img{
     width: 30rem;
     height: 30rem;
     display: grid;
-    flex-direction: row;
-    align-items: center;
+    align-content: center;
     justify-content: center;
-    border: 1px solid magenta;
 }
-.pokemon label1{
+.labeln{
+    font-size: 1rem;
+}
+.label1{
+    top: 2rem;
+    left: 35rem;
+    width: 40rem;
+    height: 6rem;
     font-family: 'poke2';
+    font-size: 5rem;
     position: absolute;
     color:#3d7dca;
+    align-items: center;
+    justify-content: center;
 }
-.pokemon label2{
+.label2{
+    top: 2rem;
+    left: 35rem;
+    height: 6rem;
+    width: 40rem;
     font-family: 'poke1';
-    color: #ffcb05;
-}
-.pokedex{
-    right: 0;
+    font-size: 5rem;
     position: absolute;
+    color: #ffcb05;
+    align-items: center;
+    justify-content: center;
 }
-.pokevida{
+.dex{
+    width: 40rem;
+    height: 2rem;
+    margin-top: 35rem;
+    margin-left: 34rem;
+    display: grid;
+    position: absolute;
+    align-content: center;
+    justify-content: space-around;
 }
 .poketipos{
     bottom: 3rem;
@@ -63,27 +84,122 @@
     display: grid;
     position: absolute;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
 }
 .poketipo1{
     height: 30rem;
     width: 30rem;
-    position: absolute;
+    left:20rem;
+    position: fixed;
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
-    border: 1px solid rgb(0, 0, 0);
 }
 .poketipo2{
-    right: 0;
+    position: fixed;
     height: 30rem;
     width: 30rem;
-    position: relative;
+    left:58rem;
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
-    border: 1px solid rgb(18, 212, 154);
-    
 }
-.poke{
+.stats{
+    /* font-family: 'Courier New', Courier, monospace; */
+    font-style: normal;
+    margin-left: 44rem;
+    margin-top: 26rem;
+    width: 21rem;
+    height: 9rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(3rem, 9rem));
+    grid-template-rows: repeat(auto-fill, minmax(1rem, 2rem));
+    grid-gap: 1rem;
+    position:absolute;
+    align-content: center;
+    justify-content: center;
 }
+.pokevida{
+    width: 8rem;
+    height: 2rem;
+    top:-1rem;
+    bottom: -1rem;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+}
+.pokeat{
+    width: 8rem;
+    height: 2rem;
+    top:-1rem;
+    bottom: -1rem;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+}
+.pokeates{
+    width: 8rem;
+    height: 2rem;
+    top:-1rem;
+    bottom: -1rem;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+}
+.pokede{
+    width: 8rem;
+    height: 2rem;
+    top:-1rem;
+    bottom: -1rem;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+}
+.pokedees{
+    width: 8rem;
+    height: 2rem;
+    top:-1rem;
+    bottom: -1rem;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+}
+.pokevel{
+    width: 8rem;
+    height: 2rem;
+    top:-1rem;
+    bottom: -1rem;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+}
+.pokealt{
+    width: 8rem;
+    height: 2rem;
+    top:-1rem;
+    bottom: -1rem;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+}
+.pokepeso{
+    font-family: 'Courier New', Courier, monospace;
+    font-style: normal;
+    width: 8rem;
+    height: 2rem;
+    top:-1rem;
+    bottom: -1rem;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+}
+/* .pokealt{
+    width: 8rem;
+    height: 2rem;
+    top:-1rem;
+    bottom: -1rem;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgb(0, 217, 255);
+} */

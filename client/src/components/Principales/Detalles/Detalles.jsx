@@ -2,6 +2,9 @@ import style from './Detalles.module.css';
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from "react-redux";
 import {POKEALL, PKMN, GETPKM, PKMTIPOS} from '../../../redux/actions';
+import charizard from '../../../Multimedia/IMG/pokemones/006.png'
+import Dragon from'../../../Multimedia/IMG/tipos/Dragon.png';
+import Fuego from'../../../Multimedia/IMG/tipos/Fuego.png';
 
 import NAV from '../../Nav/navbar';
 import PokeBarra from '../../Borders/Poke/Poke';
@@ -43,115 +46,115 @@ const Detalles = ({onSearch}) => {
     }
 //     const t1=()=>{
 //       if(pokemon.Tipo1==='dragon'){
-//         return '../../../Multimedia/IMG/tipos/Dragon.png';
+//         return Dragon;
 //       }
 //       else if(pokemon.Tipo1==='fire'){
-//          return '../../../Multimedia/IMG/tipos/Fuego.png';
+//          return Fuego;
 //       }
 //       else if(pokemon.Tipo1==='fighting'){
-//         return '../../../Multimedia/IMG/tipos/Lucha.png';
+//         return Lucha;
 //       }
 //       else if(pokemon.Tipo1==='flying'){
-//          return '../../../Multimedia/IMG/tipos/Volador.png';
+//          return Valador;
 //       }
 //       else if(pokemon.Tipo1==='poison'){
-//          return '../../../Multimedia/IMG/tipos/Veneno.png';
+//          return Veneno;
 //       }
 //       else if(pokemon.Tipo1==='ground'){
-//          return '../../../Multimedia/IMG/tipos/Tierra.png';
+//          return Tierra;
 //       }
 //       else if(pokemon.Tipo1==='rock'){
-//          return '../../../Multimedia/IMG/tipos/Roca.png';
+//          return Roca;
 //       }
 //       else if(pokemon.Tipo1==='bug'){
-//          return '../../../Multimedia/IMG/tipos/Insecto.png';
+//          return Insecto;
 //       }
 //       else if(pokemon.Tipo1==='ghost'){
-//          return '../../../Multimedia/IMG/tipos/Fantasma.png';
+//          return Fantasma;
 //       }
 //       else if(pokemon.Tipo1==='steel'){
-//          return '../../../Multimedia/IMG/tipos/Acero.png';
+//          return Acero;
 //       }
 //       else if(pokemon.Tipo1==='water'){
-//          return '../../../Multimedia/IMG/tipos/Agua.png';
+//          return Agua;
 //       }
 //       else if(pokemon.Tipo1==='grass'){
-//          return '../../../Multimedia/IMG/tipos/Planta.png';
+//          return Planta;
 //       }
 //       else if(pokemon.Tipo1==='electric'){
-//          return '../../../Multimedia/IMG/tipos/Electrico.png';
+//          return Electrico;
 //       }
 //       else if(pokemon.Tipo1==='psychic'){
-//          return '../../../Multimedia/IMG/tipos/Psiquico.png';
+//          return Psiquico;
 //       }
 //       else if(pokemon.Tipo1==='ice'){
-//          return '../../../Multimedia/IMG/tipos/Hielo.png';
+//          return Hielo;
 //       }
 //       else if(pokemon.Tipo1==='dark'){
-//          return '../../../Multimedia/IMG/tipos/Siniestro.png';
+//          return Siniestro;
 //       }
 //       else if(pokemon.Tipo1==='fairy'){
-//          return '../../../Multimedia/IMG/tipos/Hada.png';
+//          return Hada;
 //       }
 //       else{
-//         return '../../../Multimedia/IMG/tipos/Normal.png';
+//         return Normal;
 //       }
 //    }
 //    const t2=()=>{
-//     if(pokemon.Tipo1==='dragon'){
-//       return '../../../Multimedia/IMG/tipos/Dragon.png';
-//     }
-//     else if(pokemon.Tipo1==='fire'){
-//        return '../../../Multimedia/IMG/tipos/Fuego.png';
-//     }
-//     else if(pokemon.Tipo1==='fighting'){
-//       return '../../../Multimedia/IMG/tipos/Lucha.png';
-//     }
-//     else if(pokemon.Tipo1==='flying'){
-//        return '../../../Multimedia/IMG/tipos/Volador.png';
-//     }
-//     else if(pokemon.Tipo1==='poison'){
-//        return '../../../Multimedia/IMG/tipos/Veneno.png';
-//     }
-//     else if(pokemon.Tipo1==='ground'){
-//        return '../../../Multimedia/IMG/tipos/Tierra.png';
-//     }
-//     else if(pokemon.Tipo1==='rock'){
-//        return '../../../Multimedia/IMG/tipos/Roca.png';
-//     }
-//     else if(pokemon.Tipo1==='bug'){
-//        return '../../../Multimedia/IMG/tipos/Insecto.png';
-//     }
-//     else if(pokemon.Tipo1==='ghost'){
-//        return '../../../Multimedia/IMG/tipos/Fantasma.png';
-//     }
-//     else if(pokemon.Tipo1==='steel'){
-//        return '../../../Multimedia/IMG/tipos/Acero.png';
-//     }
-//     else if(pokemon.Tipo1==='water'){
-//        return '../../../Multimedia/IMG/tipos/Agua.png';
-//     }
-//     else if(pokemon.Tipo1==='grass'){
-//        return '../../../Multimedia/IMG/tipos/Planta.png';
-//     }
-//     else if(pokemon.Tipo1==='electric'){
-//        return '../../../Multimedia/IMG/tipos/Electrico.png';
-//     }
-//     else if(pokemon.Tipo1==='psychic'){
-//        return '../../../Multimedia/IMG/tipos/Psiquico.png';
-//     }
-//     else if(pokemon.Tipo1==='ice'){
-//        return '../../../Multimedia/IMG/tipos/Hielo.png';
-//     }
-//     else if(pokemon.Tipo1==='dark'){
-//        return '../../../Multimedia/IMG/tipos/Siniestro.png';
-//     }
-//     else if(pokemon.Tipo1==='fairy'){
-//        return '../../../Multimedia/IMG/tipos/Hada.png';
-//     }
-//     else if(pokemon.Tipo1==='normal'){
-//        return '../../../Multimedia/IMG/tipos/Normal.png';
-//     }
+//       if(pokemon.Tipo1==='dragon'){
+//         return Dragon;
+//       }
+//       else if(pokemon.Tipo1==='fire'){
+//          return Fuego;
+//       }
+//       else if(pokemon.Tipo1==='fighting'){
+//         return Lucha;
+//       }
+//       else if(pokemon.Tipo1==='flying'){
+//          return Valador;
+//       }
+//       else if(pokemon.Tipo1==='poison'){
+//          return Veneno;
+//       }
+//       else if(pokemon.Tipo1==='ground'){
+//          return Tierra;
+//       }
+//       else if(pokemon.Tipo1==='rock'){
+//          return Roca;
+//       }
+//       else if(pokemon.Tipo1==='bug'){
+//          return Insecto;
+//       }
+//       else if(pokemon.Tipo1==='ghost'){
+//          return Fantasma;
+//       }
+//       else if(pokemon.Tipo1==='steel'){
+//          return Acero;
+//       }
+//       else if(pokemon.Tipo1==='water'){
+//          return Agua;
+//       }
+//       else if(pokemon.Tipo1==='grass'){
+//          return Planta;
+//       }
+//       else if(pokemon.Tipo1==='electric'){
+//          return Electrico;
+//       }
+//       else if(pokemon.Tipo1==='psychic'){
+//          return Psiquico;
+//       }
+//       else if(pokemon.Tipo1==='ice'){
+//          return Hielo;
+//       }
+//       else if(pokemon.Tipo1==='dark'){
+//          return Siniestro;
+//       }
+//       else if(pokemon.Tipo1==='fairy'){
+//          return Hada;
+//       }
+//       else if(pokemon.Tipo1==='normal'){
+//         return Normal;
+//       }
 //      else{
 //        return null;
 //      }
@@ -161,36 +164,76 @@ const Detalles = ({onSearch}) => {
             <div className={style.user}>
                 <NAV handleChange={handleChange} handleSubmit={handleSubmit} onSearch={onSearch}/>
             </div>
-            <div className={style.pokemon}>
-                {/* <img src={pokemon.Imagen} alt={pokemon.Raza} className={style.img}/> */}
-                <img src={'../../../Multimedia/IMG/pokemones/006.png'}/>
-            </div>
             <div className={style.pokeraza}>
                 <div>
                     {/* <label className={style.label1}>{pokemon.Raza}</label>
                     <label className={style.label2}>{pokemon.Raza}</label> */}
-                    <label className={style.label1}>Charizard</label>
                     <label className={style.label2}>Charizard</label>
+                    <label className={style.label1}>Charizard</label>
                 </div>
             </div>
             <div className={style.poketipos}>
                 <div className={style.poketipo1}>
-                    <img src={'../../../Multimedia/IMG/tipos/Dragon.png'}/>
-                    {/* {src=t1()} */}
+                    <img src={ Fuego } alt={'hola'}></img>
+                    {/* {src={ t1() }} */}
                 </div>
                 <div className={style.poketipo2}>
-                    <img src={'../../../Multimedia/IMG/tipos/Dragon.png'}/>
-                    {/* {src=t2()} */}
+                    <img src={ Dragon }/>
+                    {/* {src={ t2() }} */}
                 </div>
             </div>
-            <div className={style.pokedex}>
-                <label>1</label>
+            <div className={style.dex}>
+                <div className={style.pokedex}>
+                    {/* <label>PokeDex: {pokemon.id}</label> */}
+                    {/* <label>PokeDex: {pokemon.id}</label> */}
+                    <p className={style.labeln}>6</p>
+                </div>
             </div>
-            <div className={style.poke}>
-                <label></label>
+            <div className={style.stats}>
+                <div className={style.pokevida}>
+                    {/* <label>Vida: {pokemon.Vida}</label> */}
+                    {/* <label>Vida: {pokemon.Vida}</label> */}
+                    <p className={style.labeln}>Vida: 255</p>
+                </div>
+                <div className={style.pokeat}>
+                    {/* <label>Ataque: {pokemon.Ataque}</label> */}
+                    {/* <label>Ataque: {pokemon.Ataque}</label> */}
+                    <p className={style.labeln}>Ataque: 255</p>
+                </div>
+                <div className={style.pokeates}>
+                    {/* <label>Ataque especial: {pokemon.Ataqueespecial}</label> */}
+                    {/* <label>Ataque especial: {pokemon.Ataqueespecial}</label> */}
+                    <p className={style.labeln}>Ataque especial: 255</p>
+                </div>
+                <div className={style.pokede}>
+                    {/* <label>Defensa: {pokemon.Defensa}</label> */}
+                    {/* <label>Defensa: {pokemon.Defensa}</label> */}
+                    <p className={style.labeln}>Defensa: 255</p>
+                </div>
+                <div className={style.pokedees}>
+                    {/* <label>Defensa especial: {pokemon.Defensaespecial}</label> */}
+                    {/* <label>Defensa especial: {pokemon.Defensaespecial}</label> */}
+                    <p className={style.labeln}>Defensa especial: 255</p>
+                </div>
+                <div className={style.pokevel}>
+                    {/* <label>Velocidad: {pokemon.Velocidad}</label> */}
+                    {/* <label>Velocidad: {pokemon.Velocidad}</label> */}
+                    <p className={style.labeln}>Velocidad: 255</p>
+                </div>
+                <div className={style.pokealt}>
+                    {/* <label>Altura: {pokemon.Altura}</label> */}
+                    {/* <label>Altura: {pokemon.Altura}</label> */}
+                    <p className={style.labeln}>Altura: 255</p>
+                </div>
+                <div className={style.pokepeso}>
+                    {/* <label>Peso: {pokemon.Peso}</label> */}
+                    {/* <label>Peso: {pokemon.Peso}</label> */}
+                    <p className={style.labeln}>Peso: 255</p>
+                </div>
             </div>
-            <div className={style.poke}>
-                <label></label>
+            <div className={style.pokemon}>
+                {/* <img src={pokemon.Imagen} alt={pokemon.Raza} className={style.img}/> */}
+                <img src={ charizard }/>
             </div>
             <div className={style.poke}>
                 <PokeBarra/>

@@ -2,7 +2,8 @@ const { Pokemon, Types } = require('../db');
 const axios = require('axios');
 // const { PKM, PKMbase } = require('../utils/index')
 
-//https://pokeapi.co/api/v2/pokemon?offset=0&limit=1010      url de todos los pokemons de la api, al probarlo rompió la app
+//https://pokeapi.co/api/v2/pokemon?offset=0&limit=1010 
+//------>url de todos los pokemons de la api, al probarlo rompió la app
 
 const GetPokemons = async () => { //listo
     // const PKapi=[]

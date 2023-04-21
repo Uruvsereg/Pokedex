@@ -17,11 +17,7 @@ const HandlerPoke = async (req, res) => {
         res.status(400).json({error:error.message})
     }
 }
-/* aquí va cuando se solicitan diferentes datos de si es numérico o literal
-const fuente = isNaN(id) ? "dBD" : "api"//is not a number
-if(id)
-Detalle pokemon especifico, id por parámetro, API+BD------1010 pokemones en la api
-*/
+/* Detalle pokemon especifico, id por parámetro, API+BD------1010 pokemones en la api*/
 const HandlerPokemon = async (req, res) => {
     const {id} = req.params;
     const lugar = isNaN(id) ? "BD" : "api"//revisa si el origen es de la base de datos o de la api
@@ -43,18 +39,6 @@ const PokeNuevo = async(req, res) => {//funciona
     catch (error) {
         res.status(400).json({error:error.message})
     }
-    // try {
-    //     const response = await PokeNew(id, Raza, Imagen, Tipo1 , Tipo2, Vida, Ataque, Ataqueespecial, Defensa, Defensaespecial, Velocidad, Altura, Peso);
-    //     res.status(200).json(response)
-    // }
-    // catch (error) {
-    //     const validnamebd = await PokeTodos.find({where:{Raza:pokemon.name.toLowerCase()}});
-    //     const validnameapi = await BuscaNombres (pokemon.name.toLowerCase());
-    //     if(validnamebd||validnameapi){
-    //         throw new Error ('El esta raza pokemon ya existe');
-    //     }
-    //     res.status(404).json({error:error.message})
-    // }
 }
 //arreglo tipos pokemon, sin hardcodeo
 const HandlerPokeTipos = async() => {
