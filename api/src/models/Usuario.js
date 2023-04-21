@@ -1,4 +1,4 @@
-const { Sequelize, DataTypes } = require('sequelize');
+const { DataTypes, Sequelize } = require('sequelize');
 
 module.exports = (sequelize) => {
     sequelize.define(
@@ -8,7 +8,7 @@ module.exports = (sequelize) => {
               type: DataTypes.UUID,//identificación alfanumérica casi imposible de tener usuarios duplicados
               allowNull: false,
               primaryKey: true,
-              defaultValue: DataTypes.UUIDV4//crea automáticamente el ID
+              defaultValue: Sequelize.UUIDV4//crea automáticamente el ID
            },
            nombre:{
               type: DataTypes.STRING,

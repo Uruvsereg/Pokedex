@@ -1,12 +1,17 @@
 .dimen{
     height: 44rem;
-    width: 69rem;
+    width: 68rem;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(8rem, 9rem));
+    grid-template-columns: repeat(auto-fill, minmax(14rem, 15rem));
     grid-template-rows: repeat(auto-fill, minmax(13rem, 15rem));
     grid-gap: 1rem;
     position:absolute;
     margin-top:0px;
     margin-left:20rem;
-    border: 1px solid red;
+}
+.barra{
+    height: 2rem;
+    width: 68rem;
+    margin-left:20rem;
+    border: 1px solid violet;
 }

@@ -17,6 +17,30 @@
         background-position: 0 0;
     }
 }
+@keyframes tracking-out-expand-forward-top{
+
+    0%{
+        transform:translateZ(0) 
+        translateY(0);
+        opacity:1
+    }
+    60%{
+        opacity:.8
+    }
+    100%{
+        letter-spacing:1em;
+        transform:translateZ(300px) translateY(-200px);
+        opacity:0
+    }
+}
+
+.tracking-out-expand-forward-top{
+    animation:tracking-out-expand-forward-top 0.4s linear both
+}
+
+
+
+
 :root{
     background-image: url('../../../Multimedia/IMG/inicialesG1.jpg');
     background-size: cover;
@@ -63,6 +87,9 @@
     border-radius: .7rem;
     filter:blur(.5rem);
     animation: pktipos 30s linear infinite;
+}
+.reg button:active{
+    animation:tracking-out-expand-forward-top 0.6s linear both
 }
 h1::first-letter{
     font-size: 100%;

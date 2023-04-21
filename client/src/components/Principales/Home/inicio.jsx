@@ -1,11 +1,12 @@
-import { useDispatch, useSelector } from "react-redux";
-import { useEffect, useState } from 'react';
 import style from './inicio.module.css';
+import { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from "react-redux";
 import NAV from '../../Nav/navbar';
-import {reducer} from '../../../redux/reducer';
 import Cards from '../../PI/Cards/Cards'
 import PokeBarra from '../../Borders/Poke/Poke';
 import BarraUser from '../../Borders/User/User';
+import {POKEALL, PKMN, GETPKM, PKMTIPOS} from '../../../redux/actions';
+import { Paginacion } from '../../Nav/Filtrado/Paginacion/poke';
 
 const Inicio=({onSearch})=> {
     const dispatch = useDispatch();
@@ -14,7 +15,7 @@ const Inicio=({onSearch})=> {
     // const [filtro, setFiltros] = useState(PoketodosC);
 
     useEffect(() => {
-        dispatch(PokeAll())
+        dispatch(POKEALL())
         // return (() =>{
         //     clearDispatch();
         // })
@@ -30,7 +31,7 @@ const Inicio=({onSearch})=> {
         // const filtro = Poketodos.filter(Pokemon => Pokemon.name.includes(buscaNombre));
         // setFiltros(filtro);
         // login(userData);
-        dispatch(PKMN(buscaNombre))
+        dispatch(Poketodos(buscaNombre))
     }
 
     return(

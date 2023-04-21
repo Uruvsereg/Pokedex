@@ -1,38 +1,50 @@
 import './App.css';
-// import react from 'react';
+import style from './App.module.css'
+import react from 'react';
 // import Formli from './components/form/login/login';
 // import FormNu from './components/form/Usuario/usuario';
-import Inicio from './components/Principales/Home/inicio';
+// import Inicio from './components/Principales/Home/inicio';
+import Detalles from './components/Principales/Detalles/Detalles';
 // import Creacion from './components/form/pokenuevo/Pokenuevo';
 // import Usuario from './components/Principales/Usuario/Usuario';
 import Footer from './components/footer/footer';
-import { Route, Switch, BrowserRouter/*, Routes/*, useLocation/*, useNavigate*/ } from 'react-router-dom';
+import { BrowserRouter, Route, Router/*, Switch/*, Routes/*, useLocation/*, useNavigate*/ } from 'react-router-dom';
 // import { useState, /*useEffect*/ } from 'react';
 // import { POKEALL } from './redux/actions';
 
 function App() {
   return (
-    // <BrowserRouter>
     <BrowserRouter>
-    <div className="App">
-      <Switch>
-        {/* <Route path={'/'} element={<Formli/>}/> */}
-        {/* <Formli className="landing"/> */}
-        {/* <Route path={'/inicio'} element={<Inicio/>}/> */}
-        <Inicio className="inicio"/>
-        {/* <Route path = {`/perfil`} component = {<Usuario/>}/> */}
-        {/* <Usuario className="perfil"/> */}
-        {/* <Route path={'pokemon/pokenuevo'} element={<Creacion/>}/> */}
-        {/* <Creacion className="pokenuevo"/> */}
-        {/* <Route path={'/perfil/registro'} element={<FormNu/>}/> */}
-        {/* <FormNu className="registro"/> */}
-      </Switch>
-      <div>
-        <Footer/>
+      <div className="App">
+        {/* <Route path = '/' className="landing">
+          <Formli className="landing"/>
+        </Route> */}
+              {/* <Formli className={style.landing}/> */}
+        {/* <Route path = '/inicio' className="inicio">
+          <Inicio/>
+        </Route> */}
+              {/* <Inicio className={style.inicio}/> */}
+        {/* <Route path =${`pokemon/${id}`} className="inicio">
+          <Inicio/>
+        </Route> */}
+              <Detalles className={style.detalles}/>
+        {/* <Route path='/perfil'>
+          <Usuario/>
+          </Route> */}
+              {/* <Usuario className={style.perfil}/> */}
+        {/* <Route path='pokemon/pokenuevo'>
+          <Creacion/>
+        </Route> */}
+              {/* <Creacion className={style.pokenuevo}/> */}
+        {/* <Route path="/perfil/registro">
+          <FormNu/>
+        </Route> */}
+              {/* <FormNu className={style.registro}/> */}
+        <div>
+          <Footer/>
+        </div>
       </div>
-    </div>
     </BrowserRouter>
-    // </BrowserRouter>
   )
 }
 

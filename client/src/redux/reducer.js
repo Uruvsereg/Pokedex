@@ -1,4 +1,4 @@
-import { POKEALL, PKMN, GETPKM, PKMTIPOS
+import { POKEALL, PKMN, GETPKM, PKMTIPOS, Cards
     //, HITEAM, BYETEAM, FILTRO, ORGANIZA 
 } from "./actions";
 
@@ -6,7 +6,8 @@ const initialState={
     Usuarios:[],
     PokeAll:[],
     Pokedetalle: [],
-    PoKeTipos: []
+    PoKeTipos: []/*,
+    Cards:[]*/
 }
 
 const reducer = (state = initialState, action) => {

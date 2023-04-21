@@ -1,0 +1,34 @@
+.navegador{
+    height: 2rem;
+    width: 69rem;
+    display: grid;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-left: 20rem;
+    border: 1px solid red;
+}
+.pag{
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: #ffcd05c7;
+    color: #003a70;
+    border: .1rem solid #3d7dca;
+    border-radius: .3rem;
+}
+.pag:hover{
+    transform: scale(1.3);
+    background-color: #003a70c4;
+    color: #ffcb05;
+    border: .1rem solid #3d7dca;
+    border-radius: 0rem;
+}
+.pag:active{
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: #ffcb05;
+    color: #003a70;
+    border: .1rem solid #3d7dca;
+    border-radius: .3rem;
+    transform: scale(1.3);
+}

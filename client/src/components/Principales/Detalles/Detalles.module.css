@@ -1,0 +1,89 @@
+@font-face {
+    font-family: 'poke1';
+    src: url(../../../fonts/PokemonSolid.ttf);
+}
+@font-face {
+    font-family: 'poke2';
+    src: url(../../../fonts/Pokemon\ Hollow.ttf);
+}
+:root{
+    background: url('../../../Multimedia/IMG/fondo\ seleccion.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+.pokemon{
+    height: 44rem;
+    width: 69rem;
+    display: grid;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-left: 20rem;
+    position: absolute;
+    border: 1px solid red;
+}
+.pokeraza{
+    top:0;
+    margin-left: 20rem;
+    height: 6rem;
+    width: 69rem;
+    border: 1px solid rgb(18, 212, 154);
+}
+.pokemon img{
+    width: 30rem;
+    height: 30rem;
+    display: grid;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid magenta;
+}
+.pokemon label1{
+    font-family: 'poke2';
+    position: absolute;
+    color:#3d7dca;
+}
+.pokemon label2{
+    font-family: 'poke1';
+    color: #ffcb05;
+}
+.pokedex{
+    right: 0;
+    position: absolute;
+}
+.pokevida{
+}
+.poketipos{
+    bottom: 3rem;
+    height: 44rem;
+    width: 69rem;
+    margin-left: 20rem;
+    display: grid;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+}
+.poketipo1{
+    height: 30rem;
+    width: 30rem;
+    position: absolute;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    border: 1px solid rgb(0, 0, 0);
+}
+.poketipo2{
+    right: 0;
+    height: 30rem;
+    width: 30rem;
+    position: relative;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    border: 1px solid rgb(18, 212, 154);
+    
+}
+.poke{
+}
