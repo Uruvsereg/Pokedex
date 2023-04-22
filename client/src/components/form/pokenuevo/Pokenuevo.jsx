@@ -2,8 +2,9 @@ import { useState } from "react";
 import style from './pokenuevo.module.css';
 import PokeBarra from '../../Borders/Poke/Poke'
 import validation from "./validaciones";
+import NAV from "../../Nav/navbar";
 
-const Formli=({login})=>{
+const Formli=({login, onSearch})=>{
     const [pokeData,setPokeData]=useState({ 
         raza:'',
         imagen:'',
@@ -54,6 +55,9 @@ const Formli=({login})=>{
 
     return(
         <div className={style.f}>
+            <div className={style.user}>
+                <NAV onSearch={onSearch}/>
+            </div>
             <form onSubmit={handleSubmit}>
                 <div className={style.ing}>
                     <div className={style.carac}>{/*Pokemon.includes(raza) ? throw new Error : */}

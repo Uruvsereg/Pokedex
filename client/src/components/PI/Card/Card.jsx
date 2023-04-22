@@ -18,15 +18,15 @@ const Card = ({elemento}) => {
     //     pokelista()
     // }, [])
 
-    const { id, Raza, image, Tipo1, Tipo2 } = elemento; 
+    const { id, raza, Imagen, Tipo1, Tipo2 } = elemento; 
     return (
         <div className={style.fondo}>
             <div className={style.nom}>
-                <h1>{Raza}</h1>
+                <h1>{raza}</h1>
             </div>
             <Link to={`/pokemon/${id}`}>
                 <div className={style.img}>
-                    <img src={image} alt={Raza}/>
+                    <img src={Imagen} alt={raza}/>
                 </div>
             </Link>
             <div className={style.PT}>

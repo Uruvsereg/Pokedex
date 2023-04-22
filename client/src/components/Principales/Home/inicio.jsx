@@ -6,20 +6,24 @@ import Cards from '../../PI/Cards/Cards'
 import PokeBarra from '../../Borders/Poke/Poke';
 import BarraUser from '../../Borders/User/User';
 import {POKEALL, PKMN, GETPKM, PKMTIPOS} from '../../../redux/actions';
-import { Paginacion } from '../../Nav/Filtrado/Paginacion/poke';
+import Paginacion from '../../Filtrado/Paginacion/pagination';
 
 const Inicio=({onSearch})=> {
     const dispatch = useDispatch();
     const Poketodos = useSelector((state) => state.PokeAll);
     const [buscaNombre, setBuscaNombre] = useState('');
-    // const [filtro, setFiltros] = useState(PoketodosC);
+    const [pokemons,setPokemons] = useState([]);
+    const [pactual,setPactual] = useState(1);
+    const cantidad = 12;
+
+    const limit = cantidad*pactual;
+    const offset = limit-cantidad;
 
     useEffect(() => {
         dispatch(POKEALL())
-        // return (() =>{
-        //     clearDispatch();
-        // })
+        // dispatch(Limpiar())
     },[dispatch]);
+    console.log(Poketodos);
 
     const handleChange = (event) => {
         event.preventDefault();
@@ -37,16 +41,19 @@ const Inicio=({onSearch})=> {
     return(
         <div>
             <div className={style.user}>
-                <NAV handleChange={handleChange} handleSubmit={handleSubmit} onSearch={onSearch}/>
+                <NAV handleChange={handleChange} onSearch={onSearch}/>
             </div>
             <div>
-                <Cards Poketodos = {Poketodos}/>
+                <Cards Poketodos={Poketodos} offset={offset} limit={limit}/>
             </div>
             <div className={style.poke}>
                 <PokeBarra/>
             </div>
             <div className={style.User}>
                 <BarraUser/>
+            </div>
+            <div className={style.barra}>
+                <div ><Paginacion cantidad={cantidad} pactual={pactual} setPactual={setPactual}/></div>
             </div>
         </div>
     )

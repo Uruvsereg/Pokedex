@@ -17,8 +17,27 @@ import Sieniestro from'../../../Multimedia/IMG/tipos/Siniestro.png';
 import Hada from'../../../Multimedia/IMG/tipos/Hada.png';
 import Normal from'../../../Multimedia/IMG/tipos/Normal.png';
 
-module.exports = {
-    Dragon, Fuego, Lucha, Volador, Veneno, Tierra,
-    Roca, Insecto, Fantasma, Acero, Agua, Planta,
-    Electrico, Psiquico, Hielo, Sieniestro, Hada, Normal,
-}
+export const Dragon = Dragon
+export const Fuego = Fuego
+export const Lucha = Lucha
+export const Volador = Volador
+export const Veneno = Veneno
+export const Tierra = Tierra
+export const Roca = Roca
+export const Insecto = Insecto
+export const Fantasma = Fantasma
+export const Acero = Acero
+export const Agua = Agua
+export const Planta = Planta
+export const Electrico = Electrico
+export const Psiquico = Psiquico
+export const Hielo = Hielo
+export const Sieniestro = Sieniestro
+export const Hada = Hada
+export const Normal = Normal
+
+// module.exports = {
+//     Dragon, Fuego, Lucha, Volador, Veneno, Tierra,
+//     Roca, Insecto, Fantasma, Acero, Agua, Planta,
+//     Electrico, Psiquico, Hielo, Sieniestro, Hada, Normal,
+// }

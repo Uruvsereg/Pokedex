@@ -2,7 +2,7 @@ import { Dragon, Fuego, Lucha, Volador, Veneno, Tierra, Roca,
     Insecto, Fantasma, Acero, Agua, Planta, Electrico, Psiquico,
     Hielo, Siniestro, Hada, Normal } from './tipos'
 
-export const tipo1 = ({pokemon}) =>{
+export const t2 = ({pokemon}) =>{
     if(pokemon.Tipo1==='dragon'){
       return Dragon;
     }

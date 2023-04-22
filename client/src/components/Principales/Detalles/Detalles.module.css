@@ -54,6 +54,9 @@
     align-items: center;
     justify-content: center;
 }
+.label1::first-letter{
+    text-transform: uppercase;
+}
 .label2{
     top: 2rem;
     left: 35rem;
@@ -65,6 +68,9 @@
     color: #ffcb05;
     align-items: center;
     justify-content: center;
+}
+.label2::first-letter{
+    text-transform: uppercase;
 }
 .dex{
     width: 40rem;

@@ -1,33 +1,32 @@
-import { POKEALL, PKMN, GETPKM, PKMTIPOS, Cards
-    //, HITEAM, BYETEAM, FILTRO, ORGANIZA 
-} from "./actions";
+import {GetPokemons, GetXNombre, GetPokedetalle, GetTipos} from './acciones'
 
 const initialState={
     Usuarios:[],
     PokeAll:[],
     Pokedetalle: [],
-    PoKeTipos: []/*,
+    PoKeTipos: [],
+    detalle:{}/*,
     Cards:[]*/
 }
 
 const reducer = (state = initialState, action) => {
     switch(action.type){
-        case POKEALL:
+        case GetPokemons:
             return{
                 ...state,
                 PokeAll: action.payload,
             }
-        case PKMN:
+        case GetXNombre:
             return{
                 ...state,
                 PokeAll: action.payload,
             }
-        case GETPKM:
+        case GetPokedetalle:
             return{
                 ...state,
-                PokeAll: action.payload,
+                detalle: action.payload,
             }
-        case PKMTIPOS:
+        case GetTipos:
             return{
                 ...state,
                 poKeTipos: action.payload

@@ -1,25 +1,29 @@
 .landing{
-    background-image: url('./Multimedia/IMG/inicialesG1.jpg');
-    background-size: cover;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-  }
-  .registro{
-    background: url('./Multimedia/IMG/legendarios.png');
-    background-size: cover;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-  }
-  .inicio{
-    background: url('./Multimedia/IMG/fondo\ seleccion.jpg');
-    background-size: cover;
-    background-position: center center;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-  }
-  .pokenuevo{
-    background: url('./Multimedia/IMG/lab.png');
-    background-size: cover;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-  }
+  background-image: url('./Multimedia/IMG/inicialesG1.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+.inicio{
+  background: url('./Multimedia/IMG/fondo\ seleccion.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+.registro{
+  background: url('./Multimedia/IMG/legendarios.png');
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+.pokenuevo{
+  background: url('./Multimedia/IMG/lab.png');
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+/*
+.perfil{
+}
+*/

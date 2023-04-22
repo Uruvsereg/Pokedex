@@ -54,14 +54,14 @@ const Formli=({login})=>{
                 </div>
                 <div className={style.ingreso}>
                     <div className={style.reg}>
-                        <button><Link to='/perfil/registro'>Registro</Link></button>
+                        <button><Link to='perfil/registro'>Registro</Link></button>
                     </div>
                 </div>
                     <div className={style.inv}>
-                        <button><Link to='/inicio'>Invitado</Link></button>
+                        <button><Link to='inicio'>Invitado</Link></button>
                     </div>
                 <div className={style.bot}>
-                    <button><Link to='/inicio'></Link></button>
+                    <button><Link to='inicio'></Link></button>
                 </div>
             </form>
         </div>

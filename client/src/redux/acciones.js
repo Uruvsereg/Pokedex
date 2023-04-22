@@ -1,9 +1,9 @@
-export const getPokemons = "getPokemons";
-export const getXNombre = "getXNombre";
-export const getPokedetalle = "getPokemon";
-export const getTipos = "getTipos";
-export const addEquipo = "addEquipo";
-export const delEquipo = "delEquipo";
+export const GetPokemons = "GetPokemons";
+export const GetXNombre = "GetXNombre";
+export const GetPokedetalle = "GetPokedetalle";
+export const GetTipos = "GetTipos";
+export const AddEquipo = "AddEquipo";
+export const DelEquipo = "DelEquipo";
 export const Filtro = "Filtro";
 export const Orden = "Orden";
 // export const  = "";

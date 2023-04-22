@@ -2,18 +2,9 @@ const { Pokemon, Types } = require('../db');
 const axios = require('axios');
 // const { PKM, PKMbase } = require('../utils/index')
 
-//https://pokeapi.co/api/v2/pokemon?offset=0&limit=1010 
-//------>url de todos los pokemons de la api, al probarlo rompió la app
-
 const GetPokemons = async () => { //listo
-    // const PKapi=[]
-    // for(let j=0; j<=10; j++){
-    //     const PKapi = (await axios.get(`https://pokeapi.co/api/v2/pokemon/${j}`)).data;
-    //     console.log(PKapi);
-    //     PKapi.push(PKapi)
-    // }
     const PKbd = await Pokemon.findAll();
-    const PKapi = (await axios.get(`https://pokeapi.co/api/v2/pokemon?offset=${offset}&limit=${limit}`)).data;
+    const PKapi = (await axios.get(`https://pokeapi.co/api/v2/pokemon?offset=0&limit=12`)).data;
     const pkapi = PKapi.results;
     const URL = pkapi.map((element) => {
         const url = element.url
@@ -61,7 +52,7 @@ const PokeID = async (id, lugar) => {// CASI LISTO
     // }
 }
 
-const BuscaNombres = async (name) => {
+const BuscaNombres = async (name) => {//listo con API, falta BD
     const nombre = await axios.get(`https://pokeapi.co/api/v2/pokemon/${name}`);
     if(nombre){
         const pokemon = nombre.data;

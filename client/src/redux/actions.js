@@ -1,27 +1,29 @@
-import { getPokemons, getXNombre, getPokedetalle, getTipos/*, addEquipo/*, delEquipo/*, Filtro/*, Orden*/ } from "./acciones";
+import { GetPokemons, GetXNombre, GetPokedetalle, GetTipos/*, AddEquipo/*, DelEquipo/*, Filtro/*, Orden*/ } from "./acciones";
 import axios from 'axios'
 
-export const POKEALL = () => {
+export const POKEALL = () => {//meter try catch
     return async function (dispatch){
         const response = await axios('http://localhost:3001/pokemon')
-        return dispatch({type:getPokemons, payload: response.data})
+        return dispatch({type:GetPokemons, payload: response.data})
     }
 }
 
 export const PKMN = async (name) => {
     const response = await axios(`http://localhost:3001/pokemon/?name=${name}`)
-    return {type:getXNombre, payload: response.data}
+    return {type:GetXNombre, payload: response.data}
 }
 
-export const GETPKM = async (id) => {
-    const response = await axios(`http://localhost:3001/pokemon/${id}`)
-    return {type:getPokedetalle, payload: response.data}
+export const GETPKM =  (id) => {
+    return async function (dispatch) {
+        const response = await axios(`http://localhost:3001/pokemon/${id}`)
+        return dispatch({type:GetPokedetalle, payload: response.data})
+    }
 }
 
 export const PKMTIPOS = () => {
     return async function (dispatch){
         const response = await axios('http://localhost:3001/pokemon/tipos')
-        return {type:getTipos, payload: response.data}
+        return dispatch({type:GetTipos, payload: response.data})
     }
 }
 // export const HITEAM = (pokemon) => {

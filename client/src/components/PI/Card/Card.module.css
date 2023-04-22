@@ -1,3 +1,6 @@
+@apertura{
+
+}
 .fondo{
     height: 12rem;
     width: 8rem;
@@ -33,4 +36,8 @@ h1{
     justify-content: center;
     grid-template-rows: repeat(auto-fill, minmax(1.05rem, 1.15rem));
     flex-direction: row;
+}
+.fondo:hover{
+    transform: scale(1.5);
+    transition: .3s;;
 }

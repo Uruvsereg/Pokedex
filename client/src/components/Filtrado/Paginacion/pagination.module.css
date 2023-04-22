@@ -1,12 +1,24 @@
-.navegador{
+.paginador{
+    bottom: 3rem;
     height: 2rem;
     width: 69rem;
     display: grid;
     flex-direction: row;
-    align-items: center;
+    position: absolute;
+    align-content: center;
     justify-content: center;
-    margin-left: 20rem;
+    margin-left: 18.25rem;/*20rem:*/
     border: 1px solid red;
+}
+.barra{
+    height: 2rem;
+    width: 68rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(1rem, .6rem));
+    grid-template-rows: repeat(auto-fill, minmax(.6rem, .6rem));
+    grid-gap: .7rem;
+    align-content: center;
+    justify-content: center;
 }
 .pag{
     width: 1.5rem;
