@@ -27,28 +27,66 @@ const GetPokemons = async () => { //listo
 }
 
 const PokeID = async (id, lugar) => {// CASI LISTO
-    const PKMon = lugar === "api" ? (await axios.get(`https://pokeapi.co/api/v2/pokemon/${id}`)).data : await Pokemon.findiByPk(id);
-    const Pokemon = {
-        id: PKMon.id,
-        raza: PKMon.name,
-        Imagen: PKMon.sprites.front_default,
-        Tipo1: PKMon.types[0].type.name.charAt(0).toUpperCase()+PKMon.types[0].type.name.slice(1),
-        Tipo2: PKMon.types[1]?.type.name.charAt(0).toUpperCase()+PKMon.types[1]?.type.name.slice(1),
-        Vida: PKMon.stats.find(({stat}) => stat.name === "hp").base_stat,
-        Ataque: PKMon.stats.find(({stat}) => stat.name === "attack").base_stat,
-        Ataqueespecial: PKMon.stats.find(({stat}) => stat.name === "special-attack").base_stat,
-        Defensa: PKMon.stats.find(({stat}) => stat.name === "defense").base_stat,
-        Defensaespecial: PKMon.stats.find(({stat}) => stat.name === "special-defense").base_stat,
-        Velocidad: PKMon.stats.find(({stat}) => stat.name === "speed").base_stat,
-        Altura: PKMon.height,
-        Peso: PKMon.weight
-    };
-    return Pokemon;
+    if(id>=1 && id<=(1009+Pokemon.length)){
+        const PKMon = lugar === "api" ? (await axios.get(`https://pokeapi.co/api/v2/pokemon/${id}`)).data : lugar === "BD" ? await Pokemon.findiByPk(id) : error;
+        const Pokemon = {
+            id: PKMon.id,
+            raza: PKMon.name,
+            Imagen: PKMon.sprites.front_default,
+            Tipo1: PKMon.types[0].type.name.charAt(0).toUpperCase()+PKMon.types[0].type.name.slice(1),
+            Tipo2: PKMon.types[1]?.type.name.charAt(0).toUpperCase()+PKMon.types[1]?.type.name.slice(1),
+            Vida: PKMon.stats.find(({stat}) => stat.name === "hp").base_stat,
+            Ataque: PKMon.stats.find(({stat}) => stat.name === "attack").base_stat,
+            Ataqueespecial: PKMon.stats.find(({stat}) => stat.name === "special-attack").base_stat,
+            Defensa: PKMon.stats.find(({stat}) => stat.name === "defense").base_stat,
+            Defensaespecial: PKMon.stats.find(({stat}) => stat.name === "special-defense").base_stat,
+            Velocidad: PKMon.stats.find(({stat}) => stat.name === "speed").base_stat,
+            Altura: PKMon.height,
+            Peso: PKMon.weight
+        };
+        return Pokemon
+    }
+    
+    // const PKMon = lugar === "api" ? (await axios.get(`https://pokeapi.co/api/v2/pokemon/${id}`)).data : await Pokemon.findiByPk(id);
+    // const Pokemon = {
+    //     id: PKMon.id,
+    //     raza: PKMon.name,
+    //     Imagen: PKMon.sprites.front_default,
+    //     Tipo1: PKMon.types[0].type.name.charAt(0).toUpperCase()+PKMon.types[0].type.name.slice(1),
+    //     Tipo2: PKMon.types[1]?.type.name.charAt(0).toUpperCase()+PKMon.types[1]?.type.name.slice(1),
+    //     Vida: PKMon.stats.find(({stat}) => stat.name === "hp").base_stat,
+    //     Ataque: PKMon.stats.find(({stat}) => stat.name === "attack").base_stat,
+    //     Ataqueespecial: PKMon.stats.find(({stat}) => stat.name === "special-attack").base_stat,
+    //     Defensa: PKMon.stats.find(({stat}) => stat.name === "defense").base_stat,
+    //     Defensaespecial: PKMon.stats.find(({stat}) => stat.name === "special-defense").base_stat,
+    //     Velocidad: PKMon.stats.find(({stat}) => stat.name === "speed").base_stat,
+    //     Altura: PKMon.height,
+    //     Peso: PKMon.weight
+    // };
+    // return Pokemon;
     // if(lugar === 'api'){
         // const PKMon = await axios.get(`https://pokeapi.co/api/v2/pokemon/${id}`).data
     // }
     // else{
         // const PKMon = await Pokemon.findByPk(id);
+    // }
+    // if(id>=1 && id<=1009){
+    //     const PKMon = lugar === "api" ? (await axios.get(`https://pokeapi.co/api/v2/pokemon/${id}`)).data : await Pokemon.findiByPk(id);
+    //     const Pokemon = {
+    //         id: PKMon.id,
+    //         raza: PKMon.name,
+    //         Imagen: PKMon.sprites.front_default,
+    //         Tipo1: PKMon.types[0].type.name.charAt(0).toUpperCase()+PKMon.types[0].type.name.slice(1),
+    //         Tipo2: PKMon.types[1]?.type.name.charAt(0).toUpperCase()+PKMon.types[1]?.type.name.slice(1),
+    //         Vida: PKMon.stats.find(({stat}) => stat.name === "hp").base_stat,
+    //         Ataque: PKMon.stats.find(({stat}) => stat.name === "attack").base_stat,
+    //         Ataqueespecial: PKMon.stats.find(({stat}) => stat.name === "special-attack").base_stat,
+    //         Defensa: PKMon.stats.find(({stat}) => stat.name === "defense").base_stat,
+    //         Defensaespecial: PKMon.stats.find(({stat}) => stat.name === "special-defense").base_stat,
+    //         Velocidad: PKMon.stats.find(({stat}) => stat.name === "speed").base_stat,
+    //         Altura: PKMon.height,
+    //         Peso: PKMon.weight
+    //     };
     // }
 }
 

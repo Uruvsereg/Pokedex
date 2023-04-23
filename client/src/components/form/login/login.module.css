@@ -33,23 +33,19 @@
         opacity:0
     }
 }
-
 .tracking-out-expand-forward-top{
     animation:tracking-out-expand-forward-top 0.4s linear both
 }
-
-
-
-
-:root{
+.pag{
+    top:0;
+    left: 0;
+    height: 100%;
+    display: grid;
+    align-items: center;
     background-image: url('../../../Multimedia/IMG/inicialesG1.jpg');
     background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
-}
-.pag{
-    display: grid;
-    align-items: center;
 }
 .ingreso{
     align-items: normal;
@@ -160,4 +156,5 @@ label{
     border-radius: .7rem;
     filter:blur(.5rem);
     animation: pktipos 30s linear infinite;
+    border: 1px solid #3d7dca;
 } */

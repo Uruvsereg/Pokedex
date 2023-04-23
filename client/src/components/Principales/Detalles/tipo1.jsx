@@ -1,60 +1,44 @@
-// import { Dragon, Fuego, Lucha, Volador, Veneno, Tierra, Roca,
-//    Insecto, Fantasma, Acero, Agua, Planta, Electrico, Psiquico,
-//    Hielo, Siniestro, Hada, Normal } from './tipos'
+import { Dragon, Fuego, Lucha, Volador, Veneno, Tierra, Roca,
+   Insecto, Fantasma, Acero, Agua, Planta, Electrico, Psiquico,
+   Hielo, Siniestro, Hada, Normal } from './tipos'
 
-// export const t1 = ({pokemon}) =>{
-//    if(pokemon.Tipo1==='dragon'){
-//      return Dragon;
-//    }
-//    else if(pokemon.Tipo1==='fire'){
-//       return Fuego;
-//    }
-//    else if(pokemon.Tipo1==='fighting'){
-//      return Lucha;
-//    }
-//    else if(pokemon.Tipo1==='flying'){
-//       return Volador;
-//    }
-//    else if(pokemon.Tipo1==='poison'){
-//       return Veneno;
-//    }
-//    else if(pokemon.Tipo1==='ground'){
-//       return Tierra;
-//    }
-//    else if(pokemon.Tipo1==='rock'){
-//       return Roca;
-//    }
-//    else if(pokemon.Tipo1==='bug'){
-//       return Insecto;
-//    }
-//    else if(pokemon.Tipo1==='ghost'){
-//       return Fantasma;
-//    }
-//    else if(pokemon.Tipo1==='steel'){
-//       return Acero;
-//    }
-//    else if(pokemon.Tipo1==='water'){
-//       return Agua;
-//    }
-//    else if(pokemon.Tipo1==='grass'){
-//       return Planta;
-//    }
-//    else if(pokemon.Tipo1==='electric'){
-//       return Electrico;
-//    }
-//    else if(pokemon.Tipo1==='psychic'){
-//       return Psiquico;
-//    }
-//    else if(pokemon.Tipo1==='ice'){
-//       return Hielo;
-//    }
-//    else if(pokemon.Tipo1==='dark'){
-//       return Siniestro;
-//    }
-//    else if(pokemon.Tipo1==='fairy'){
-//       return Hada;
-//    }
-//    else{
-//      return Normal;
-//    }
-// }
+export default function t1(pokemon){
+    switch (pokemon.Tipo1){
+        case'dragon':
+            return Dragon;
+        case'Fire':
+            return Fuego;
+        case'Fighting':
+            return Lucha;
+        case'Flying':
+            return Volador;
+        case'Poison':
+            return Veneno;
+        case'Ground':
+            return Tierra;
+        case'Bock':
+            return Roca;
+        case'Bug':
+            return Insecto;
+        case'Ghost':
+            return Fantasma;
+        case'Steel':
+            return Acero;
+        case'Water':
+            return Agua;
+        case'Grass':
+            return Planta;
+        case'Electric':
+            return Electrico;
+        case'Psychic':
+            return Psiquico;
+        case'Ice':
+            return Hielo;
+        case'Dark':
+            return Siniestro;
+        case'Fairy':
+            return Hada;
+        default:
+            return Normal;
+    }  
+}

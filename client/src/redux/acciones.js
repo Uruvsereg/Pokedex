@@ -2,6 +2,7 @@ export const GetPokemons = "GetPokemons";
 export const GetXNombre = "GetXNombre";
 export const GetPokedetalle = "GetPokedetalle";
 export const GetTipos = "GetTipos";
+export const CreaPokemon = "CreaPokemon";
 export const AddEquipo = "AddEquipo";
 export const DelEquipo = "DelEquipo";
 export const Filtro = "Filtro";

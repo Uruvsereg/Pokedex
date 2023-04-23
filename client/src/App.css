@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -35,7 +35,8 @@
   to {
     transform: rotate(360deg);
   }
-}.landing{
+} */
+.landing{
   background-image: url('./Multimedia/IMG/inicialesG1.jpg');
   background-size: cover;
   background-attachment: fixed;

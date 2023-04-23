@@ -1,9 +1,9 @@
 import style from './Detalles.module.css';
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from "react-redux";
-import {POKEALL, PKMN, GETPKM, PKMTIPOS} from '../../../redux/actions';
+import { GETPKM } from '../../../redux/actions';
 import { useParams } from 'react-router-dom';
-// import { t1 } from './tipo1';
+// import  t1  from './tipo1';
 // import { t2 } from './tipo2';
 import Dragon from'../../../Multimedia/IMG/tipos/Dragon.png';
 import Fuego from'../../../Multimedia/IMG/tipos/Fuego.png';
@@ -43,7 +43,6 @@ const Detalles = ({onSearch}) => {
     }
 
     const pokemon = useSelector((state) => state.detalle)
-    console.log(pokemon)
 
     const t1=()=>{
         switch (pokemon.Tipo1){
@@ -83,7 +82,7 @@ const Detalles = ({onSearch}) => {
                 return Hada;
             default:
                 return Normal;
-           }  
+        }  
     }
 
     const t2=()=>{
@@ -131,18 +130,19 @@ const Detalles = ({onSearch}) => {
     }
     return (
         <div>
-            <div className={style.user}>
-                <NAV handleChange={handleChange} onSearch={onSearch}/>
-            </div>
             <div className={style.pokeraza}>
                 <div>
-                    <p className={style.label2}>{pokemon.raza}</p>
-                    <p className={style.label1}>{pokemon.raza}</p>
+                    <label className={style.label2}>{pokemon.raza}</label>
+                    <label className={style.label1}>{pokemon.raza}</label>
                 </div>
+            </div>
+            <div className={style.user}>
+                <NAV handleChange={handleChange} onSearch={onSearch}/>
             </div>
             <div className={style.poketipos}>
                 <div className={style.poketipo1}>
                     {/* <img src={ Fuego } alt={'hola'}></img> */}
+                    {/* <img src={ t1(pokemon) } alt={pokemon.Tipo1}/> */}
                     <img src={ t1() } alt={pokemon.Tipo1}/>
                 </div>
                 <div className={style.poketipo2}>
@@ -152,50 +152,59 @@ const Detalles = ({onSearch}) => {
             </div>
             <div className={style.dex}>
                 <div className={style.pokedex}>
-                    <p>PokeDex: {pokemon.id}</p>
-                    <p>PokeDex: {pokemon.id}</p>
+                    <label className={style.label4}>PokeDex: </label>
+                    <label className={style.label3}>PokeDex: </label>
+                    <p className={style.labeln}>{pokemon.id}</p>
                     {/* <p className={style.labeln}>6</p> */}
                 </div>
             </div>
             <div className={style.stats}>
                 <div className={style.pokevida}>
-                    <p>Vida: {pokemon.Vida}</p>
-                    <p>Vida: {pokemon.Vida}</p>
+                    <p className={style.labeln}>{pokemon.Vida}</p>
+                    <p className={style.label4}>Vida: </p>
+                    <p className={style.label3}>Vida: </p>
                     {/* <p className={style.labeln}>Vida: 255</p> */}
                 </div>
                 <div className={style.pokeat}>
-                    <p>Ataque: {pokemon.Ataque}</p>
-                    <p>Ataque: {pokemon.Ataque}</p>
+                    <p className={style.labeln}>{pokemon.Ataque}</p>
+                    <p className={style.label4}>Ataque: </p>
+                    <p className={style.label3}>Ataque: </p>
                     {/* <p className={style.labeln}>Ataque: 255</p> */}
                 </div>
                 <div className={style.pokeates}>
-                    <p>Ataque especial: {pokemon.Ataqueespecial}</p>
-                    <p>Ataque especial: {pokemon.Ataqueespecial}</p>
+                    <p className={style.labeln}>{pokemon.Ataqueespecial}</p>
+                    <p className={style.label4}>Ataque especial: </p>
+                    <p className={style.label3}>Ataque especial: </p>
                     {/* <p className={style.labeln}>Ataque especial: 255</p> */}
                 </div>
                 <div className={style.pokede}>
-                    <p>Defensa: {pokemon.Defensa}</p>
-                    <p>Defensa: {pokemon.Defensa}</p>
+                    <p className={style.labeln}>{pokemon.Defensa}</p>
+                    <p className={style.label4}>Defensa: </p>
+                    <p className={style.label3}>Defensa: </p>
                     {/* <p className={style.labeln}>Defensa: 255</p> */}
                 </div>
                 <div className={style.pokedees}>
-                    <p>Defensa especial: {pokemon.Defensaespecial}</p>
-                    <p>Defensa especial: {pokemon.Defensaespecial}</p>
+                    <p className={style.labeln}>{pokemon.Defensaespecial}</p>
+                    <p className={style.label4}>Defensa especial: </p>
+                    <p className={style.label3}>Defensa especial: </p>
                     {/* <p className={style.labeln}>Defensa especial: 255</p> */}
                 </div>
                 <div className={style.pokevel}>
-                    <p>Velocidad: {pokemon.Velocidad}</p>
-                    <p>Velocidad: {pokemon.Velocidad}</p>
+                    <p className={style.labeln}>{pokemon.Velocidad}</p>
+                    <p className={style.label4}>Velocidad: </p>
+                    <p className={style.label3}>Velocidad: </p>
                     {/* <p className={style.labeln}>Velocidad: 255</p> */}
                 </div>
                 <div className={style.pokealt}>
-                    <p>Altura: {pokemon.Altura}</p>
-                    <p>Altura: {pokemon.Altura}</p>
+                    <p className={style.labeln}>{pokemon.Altura}</p>
+                    <p className={style.label4}>Altura: </p>
+                    <p className={style.label3}>Altura: </p>
                     {/* <p className={style.labeln}>Altura: 255</p> */}
                 </div>
                 <div className={style.pokepeso}>
-                    <p>Peso: {pokemon.Peso}</p>
-                    <p>Peso: {pokemon.Peso}</p>
+                    <p className={style.labeln}>{pokemon.Peso}</p>
+                    <p className={style.label4}>Peso: </p>
+                    <p className={style.label3}>Peso: </p>
                     {/* <p className={style.labeln}>Peso: 255</p> */}
                 </div>
             </div>

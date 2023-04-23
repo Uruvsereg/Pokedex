@@ -20,7 +20,8 @@ const HandlerPoke = async (req, res) => {
 /* Detalle pokemon especifico, id por parámetro, API+BD------1010 pokemones en la api*/
 const HandlerPokemon = async (req, res) => {
     const {id} = req.params;
-    const lugar = isNaN(id) ? "BD" : "api"//revisa si el origen es de la base de datos o de la api
+    const lugar = isNaN(id) ? "BD" : (id>=1&&id<=1008) ? "api" : 'error'//revisa si el origen es de la base de datos o de la api
+    // const lugar = isNaN(id) ? "BD" : "api"//revisa si el origen es de la base de datos o de la api
     try {
         const response = await PokeID (id, lugar);
         res.status(200).json(response);

@@ -14,23 +14,25 @@
     background-repeat: no-repeat;
 }
 .pokemon{
-    height: 38rem;
-    width: 69rem;
+    height: 40rem;
+    width: 40rem;
     display: grid;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    margin-left: 20rem;
+    margin-left: 40rem;
+    margin-top: 2rem;
     position: absolute;
 }
 .pokeraza{
-    top:0;
     margin-left: 20rem;
-    height: 6rem;
-    width: 69rem;
+    height: 4rem;
+    width: 80rem;
     display: grid;
-    align-items: center;
+    align-content: center;
     justify-content: center;
+    align-items: center;
+    /* border: 1px solid red; */
 }
 .pokemon img{
     width: 30rem;
@@ -40,13 +42,18 @@
     justify-content: center;
 }
 .labeln{
-    font-size: 1rem;
+    font-size: 1.5rem;
+    margin-left: 13rem;
+    margin-top: -.6rem;
+    position: absolute;
 }
 .label1{
     top: 2rem;
-    left: 35rem;
+    left: 43rem;
     width: 40rem;
     height: 6rem;
+    margin-left: 5rem;
+    margin-top: 1rem;
     font-family: 'poke2';
     font-size: 5rem;
     position: absolute;
@@ -59,9 +66,11 @@
 }
 .label2{
     top: 2rem;
-    left: 35rem;
+    left: 43rem;
     height: 6rem;
     width: 40rem;
+    margin-left: 5rem;
+    margin-top: 1rem;
     font-family: 'poke1';
     font-size: 5rem;
     position: absolute;
@@ -72,20 +81,52 @@
 .label2::first-letter{
     text-transform: uppercase;
 }
-.dex{
-    width: 40rem;
+.label3{
+    margin-top: -2rem;
     height: 2rem;
-    margin-top: 35rem;
-    margin-left: 34rem;
-    display: grid;
+    width: 20rem;
+    font-family: 'poke2';
+    font-size: 1.5rem;
     position: absolute;
+    color:#3d7dca;
+    align-items: center;
+    justify-content: center;
+}
+.label3::first-letter{
+    text-transform: uppercase;
+}
+.label4{
+    margin-top: -2rem;
+    height: 2rem;
+    width: 20rem;
+    font-family: 'poke1';
+    font-size: 1.5rem;
+    position: absolute;
+    color: #ffcb05;
+    align-items: center;
+    justify-content: center;
+}
+.label4::first-letter{
+    text-transform: uppercase;
+}
+.dex{
+    margin-left: 20rem;
+    width: 80rem;
+    height: 2rem;
+    margin-top: 46rem;
+    margin-left: 20rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(6rem, 10rem));
+    grid-template-rows: repeat(auto-fill, minmax(8rem, 10rem));
     align-content: center;
-    justify-content: space-around;
+    /* justify-content: center; */
+    align-items: center;
+    position: absolute;
 }
 .poketipos{
     bottom: 3rem;
     height: 44rem;
-    width: 69rem;
+    width: 80rem;
     margin-left: 20rem;
     display: grid;
     position: absolute;
@@ -96,6 +137,7 @@
     height: 30rem;
     width: 30rem;
     left:20rem;
+    margin-top: -17rem;
     position: fixed;
     background-size: cover;
     background-position: center center;
@@ -105,7 +147,8 @@
     position: fixed;
     height: 30rem;
     width: 30rem;
-    left:58rem;
+    left:67rem;
+    margin-top: -17rem;
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -113,17 +156,18 @@
 .stats{
     /* font-family: 'Courier New', Courier, monospace; */
     font-style: normal;
-    margin-left: 44rem;
-    margin-top: 26rem;
-    width: 21rem;
+    margin-left: 41rem;
+    margin-top: 36rem;
+    width: 35rem;
     height: 9rem;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(3rem, 9rem));
+    grid-template-columns: repeat(auto-fill, minmax(1rem, 15rem));
     grid-template-rows: repeat(auto-fill, minmax(1rem, 2rem));
     grid-gap: 1rem;
     position:absolute;
     align-content: center;
     justify-content: center;
+    border:1rem solid #7700ff,
 }
 .pokevida{
     width: 8rem;
@@ -198,6 +242,10 @@
     display: grid;
     justify-content: center;
     align-content: center;
+}
+.user{
+    position: relative;
+    margin-top: -4rem;
 }
 /* .pokealt{
     width: 8rem;

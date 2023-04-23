@@ -1,21 +1,9 @@
-import { useEffect } from "react";
-import { getXNombre } from "../../../redux/acciones";
-import { PKMN } from "../../../redux/actions";
-
-const validations = async(pokeData) => {
-    // useEffect(({pokeData}) => {
-    //     const Razass = pokeData.Raza;
-    //     async function Razas() {
-    //         const Razas = await BuscaNombres(pokeData.Raza)
-    //         if (!pokeData.Raza) {
-    //             setIsValid(false);
-    //             return;
-    //         }
-    //       const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokeData.Raza}`);;
-    //     }
-    //     // validateName();
-    //   }, [pokeData.Raza]);
-    const Razas = await PKMN(pokeData.Raza)
+const validations = (pokeData) => {
+//     useEffect(({pokeData}) => {
+//         const Raza = pokeData.Raza; 
+//         // validateName();
+//       }, [pokeData.Raza]);
+//     // const Razas = await PKMN(pokeData.Raza)
     let errors={}
     if(!pokeData.Raza){
         errors.raza='La raza no debe estar vacía';
@@ -23,7 +11,7 @@ const validations = async(pokeData) => {
     if(pokeData.Raza.length<4||pokeData.Raza.length>20){
         errors.raza='La raza debe contener entre 4 y 20 caracteres';
     }
-    if(pokeData.Raza===Razas()){
+    if(pokeData.Raza==Razas()){
         errors.raza='Esta raza ya existe';
     }
     if(!pokeData.Imagen){
@@ -85,9 +73,9 @@ const validations = async(pokeData) => {
     }
     return errors;
 }
-export default validations;
-/*
-if(pokeData.){
-    errors.='';
-}
-*/
+// export default validations;
+// /*
+// if(pokeData.){
+//     errors.='';
+// }
+// */

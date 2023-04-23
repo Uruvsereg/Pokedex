@@ -1,4 +1,4 @@
-import { GetPokemons, GetXNombre, GetPokedetalle, GetTipos/*, AddEquipo/*, DelEquipo/*, Filtro/*, Orden*/ } from "./acciones";
+import { GetPokemons, GetXNombre, GetPokedetalle, GetTipos/*, CreaPokemon/*, AddEquipo/*, DelEquipo/*, Filtro/*, Orden*/ } from "./acciones";
 import axios from 'axios'
 
 export const POKEALL = () => {//meter try catch
@@ -26,6 +26,14 @@ export const PKMTIPOS = () => {
         return dispatch({type:GetTipos, payload: response.data})
     }
 }
+
+// export const POKREA = (props) => {
+//     return async function(dispatch){
+//         const response = await axios(`http://localhost:3001/pokemon/${id}`)
+//         return dispatch({type:CreaPokemon, payload: response.data})
+//     }
+// } //esta cción debe retornar un booleano 
+
 // export const HITEAM = (pokemon) => {
 //     return {type:addEquipo, payload: pokemon}
 // }

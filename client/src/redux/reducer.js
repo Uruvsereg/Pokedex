@@ -1,10 +1,11 @@
-import {GetPokemons, GetXNombre, GetPokedetalle, GetTipos} from './acciones'
+import {GetPokemons, GetXNombre, GetPokedetalle, GetTipos, CreaPokemon} from './acciones'
 
 const initialState={
     Usuarios:[],
     PokeAll:[],
-    Pokedetalle: [],
+    Pokefiltro: [],
     PoKeTipos: [],
+    Pokrea: [],
     detalle:{}/*,
     Cards:[]*/
 }
@@ -29,17 +30,23 @@ const reducer = (state = initialState, action) => {
         case GetTipos:
             return{
                 ...state,
-                poKeTipos: action.payload
+                poKeTipos: action.payload,
             }
-        // case HITEAM:
+            case CreaPokemon:
+                return{
+                    ...state,
+                    Pokrea: action.payload,
+                }
+        /* case FILTRO:
+            return{
+                ...state,
+                Pokefiltro: action.payload,
+            }*/
+        // case AddEquipo:
         //     return{
         //         ...state,
         //     }
-        // case BYETEAM:
-        //     return{
-        //         ...state,
-        //     }
-        // case FILTRO:
+        // case DelEquipo:
         //     return{
         //         ...state,
         //     }
