@@ -1,10 +1,14 @@
 const { Pokemon, Types } = require('../db');
 const axios = require('axios');
 // const { PKM, PKMbase } = require('../utils/index')
-
+const sumar = (a,b) =>{
+    if(typeof a !== "number"||typeof b !== "number")
+        throw Error("La función debe recibir 2 números");
+    return a+b;
+}
 const GetPokemons = async () => { //listo
     const PKbd = await Pokemon.findAll();
-    const PKapi = (await axios.get(`https://pokeapi.co/api/v2/pokemon?offset=0&limit=12`)).data;
+    const PKapi = (await axios.get(`https://pokeapi.co/api/v2/pokemon?offset=0&limit=72`)).data;
     const pkapi = PKapi.results;
     const URL = pkapi.map((element) => {
         const url = element.url
@@ -46,48 +50,6 @@ const PokeID = async (id, lugar) => {// CASI LISTO
         };
         return Pokemon
     }
-    
-    // const PKMon = lugar === "api" ? (await axios.get(`https://pokeapi.co/api/v2/pokemon/${id}`)).data : await Pokemon.findiByPk(id);
-    // const Pokemon = {
-    //     id: PKMon.id,
-    //     raza: PKMon.name,
-    //     Imagen: PKMon.sprites.front_default,
-    //     Tipo1: PKMon.types[0].type.name.charAt(0).toUpperCase()+PKMon.types[0].type.name.slice(1),
-    //     Tipo2: PKMon.types[1]?.type.name.charAt(0).toUpperCase()+PKMon.types[1]?.type.name.slice(1),
-    //     Vida: PKMon.stats.find(({stat}) => stat.name === "hp").base_stat,
-    //     Ataque: PKMon.stats.find(({stat}) => stat.name === "attack").base_stat,
-    //     Ataqueespecial: PKMon.stats.find(({stat}) => stat.name === "special-attack").base_stat,
-    //     Defensa: PKMon.stats.find(({stat}) => stat.name === "defense").base_stat,
-    //     Defensaespecial: PKMon.stats.find(({stat}) => stat.name === "special-defense").base_stat,
-    //     Velocidad: PKMon.stats.find(({stat}) => stat.name === "speed").base_stat,
-    //     Altura: PKMon.height,
-    //     Peso: PKMon.weight
-    // };
-    // return Pokemon;
-    // if(lugar === 'api'){
-        // const PKMon = await axios.get(`https://pokeapi.co/api/v2/pokemon/${id}`).data
-    // }
-    // else{
-        // const PKMon = await Pokemon.findByPk(id);
-    // }
-    // if(id>=1 && id<=1009){
-    //     const PKMon = lugar === "api" ? (await axios.get(`https://pokeapi.co/api/v2/pokemon/${id}`)).data : await Pokemon.findiByPk(id);
-    //     const Pokemon = {
-    //         id: PKMon.id,
-    //         raza: PKMon.name,
-    //         Imagen: PKMon.sprites.front_default,
-    //         Tipo1: PKMon.types[0].type.name.charAt(0).toUpperCase()+PKMon.types[0].type.name.slice(1),
-    //         Tipo2: PKMon.types[1]?.type.name.charAt(0).toUpperCase()+PKMon.types[1]?.type.name.slice(1),
-    //         Vida: PKMon.stats.find(({stat}) => stat.name === "hp").base_stat,
-    //         Ataque: PKMon.stats.find(({stat}) => stat.name === "attack").base_stat,
-    //         Ataqueespecial: PKMon.stats.find(({stat}) => stat.name === "special-attack").base_stat,
-    //         Defensa: PKMon.stats.find(({stat}) => stat.name === "defense").base_stat,
-    //         Defensaespecial: PKMon.stats.find(({stat}) => stat.name === "special-defense").base_stat,
-    //         Velocidad: PKMon.stats.find(({stat}) => stat.name === "speed").base_stat,
-    //         Altura: PKMon.height,
-    //         Peso: PKMon.weight
-    //     };
-    // }
 }
 
 const BuscaNombres = async (name) => {//listo con API, falta BD
@@ -127,7 +89,7 @@ const GetTipos = async () => {
     }
 }
 
-module.exports = {GetPokemons, PokeID, BuscaNombres, PokeNew, GetTipos};
+module.exports = {sumar, GetPokemons, PokeID, BuscaNombres, PokeNew, GetTipos};
 
 
 // const PKM = async (arr) => {

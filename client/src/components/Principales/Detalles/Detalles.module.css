@@ -6,12 +6,8 @@
     font-family: 'poke2';
     src: url(../../../fonts/Pokemon\ Hollow.ttf);
 }
-:root{
-    background: url('../../../Multimedia/IMG/fondo\ seleccion.jpg');
-    background-size: cover;
-    background-position: center center;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
+.background{
+    background: url('../../../Multimedia/IMG/la\ ultima\ cena\ pokemon.jpg') cover center center fixed no-repeat;
 }
 .pokemon{
     height: 40rem;

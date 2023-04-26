@@ -33,33 +33,50 @@
         opacity:0
     }
 }
-.tracking-out-expand-forward-top{
-    animation:tracking-out-expand-forward-top 0.4s linear both
-}
-.pag{
-    top:0;
-    left: 0;
-    height: 100%;
-    display: grid;
-    align-items: center;
+body{
     background-image: url('../../../Multimedia/IMG/inicialesG1.jpg');
     background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
 }
-.ingreso{
-    align-items: normal;
+form{}
+.tracking-out-expand-forward-top{
+    animation:tracking-out-expand-forward-top 0.4s linear both
 }
-.reg{
+.pag{
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
     display: grid;
     align-items: center;
+}
+.ingreso{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.loginu{
+    width: fit-content;
+    display:flex;
+    align-items: center;
+}
+.loginp{
+    width: fit-content;
+    display:flex;
+    align-items: center;
+}
+.ingresob{
+    display: flex;
+    flex-direction: column;
     justify-content: center;
-    margin-left: 42rem;
-    width: 19rem;
-    height: 5rem;
+    align-items: center;
+}
+.reg{
+    padding: 1rem;
+    width: fit-content;
 }
 .reg button{
-    padding-top:.5rem;
     background: black;
     cursor: pointer;
     border: none;
@@ -91,11 +108,6 @@ h1::first-letter{
     font-size: 100%;
     font-family: 'poke1';
 }
-.ing{
-    align-items: center;
-    width: 40rem;
-    margin-left: 32rem;
-}
 label{
     font-size: 2em;
     font-family: 'poke1';
@@ -108,19 +120,17 @@ label{
     color:#3d7dca;
 }
 .inv{
+    padding: 2rem;
     display: grid;
     align-items: center;
-    width: 4rem;
-    height: 3rem;
-    margin-left: 49.3rem;
+    width: fit-content;
 }
 .bot{
+    padding: 5rem;
     display: grid;
     align-items: center;
-    margin-left: 49.5rem;
 }
 .bot button{
-    margin-top: 7rem;
     height: 3.9rem;
     width: 3.9rem;
     border: 0 solid transparent ;
@@ -141,20 +151,3 @@ label{
     background: url(../../../Multimedia/IMG/POKEDADO.png);
     background-position: center center;
 }
-
-/*
-.reg button::before{
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(45deg,#458B95ff, #1C4B27ff, #9C2B2Fff, #E3E22Bff, #1553E0ff, #87D3F5ff, #A52A6Cff, #5F2C89ff, #AA1F25ff, #010100ff);
-    background-size: 800%;
-    border-radius: .7rem;
-    filter:blur(.5rem);
-    animation: pktipos 30s linear infinite;
-    border: 1px solid #3d7dca;
-} */

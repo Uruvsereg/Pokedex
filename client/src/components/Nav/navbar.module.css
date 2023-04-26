@@ -13,7 +13,7 @@
     margin-left: 0;
     background: linear-gradient(to bottom right, rgba(255, 0, 0, 0.6), black, rgba(255, 255, 255, 0.6));
 }
-.button{
+.butto{
     background-image: none;
     background-color: #ffcb05;
     border: .2rem solid #3d7dca;
@@ -22,7 +22,7 @@
     border-radius: 2rem;
     box-shadow: 0 0 1rem #003a70;
 }
-.button:hover{
+.butto:hover{
     box-shadow: 0 0 1rem red;
     border: .2rem ridge #003a70;
 }

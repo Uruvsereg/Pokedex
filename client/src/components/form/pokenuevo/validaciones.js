@@ -1,19 +1,20 @@
+import {useState, useEffect} from 'react';
+
 const validations = (pokeData) => {
-//     useEffect(({pokeData}) => {
-//         const Raza = pokeData.Raza; 
-//         // validateName();
-//       }, [pokeData.Raza]);
-//     // const Razas = await PKMN(pokeData.Raza)
+    // useEffect(({pokeData}) => {
+    //     const raza = pokeData.raza; 
+    //   }, [pokeData.raza]);
+    // const Razas = await PKMN(pokeData.Raza)
     let errors={}
-    if(!pokeData.Raza){
+    if(!pokeData.raza){
         errors.raza='La raza no debe estar vacía';
     }
-    if(pokeData.Raza.length<4||pokeData.Raza.length>20){
+    if(pokeData.raza.length<4||pokeData.raza.length>20){
         errors.raza='La raza debe contener entre 4 y 20 caracteres';
     }
-    if(pokeData.Raza==Razas()){
-        errors.raza='Esta raza ya existe';
-    }
+    // if(pokeData.raza==Razas()){
+    //     errors.raza='Esta raza ya existe';
+    // }
     if(!pokeData.Imagen){
         errors.imagen='La imagen debe ser agregada';
     }
@@ -73,7 +74,7 @@ const validations = (pokeData) => {
     }
     return errors;
 }
-// export default validations;
+export default validations;
 // /*
 // if(pokeData.){
 //     errors.='';

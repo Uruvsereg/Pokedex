@@ -10,7 +10,7 @@
 .select option{
     color: #ffcb05;
 }
-option:hover{
+.select option:hover{
     cursor: pointer;
     transform: scale(1.2);
     border: .1rem solid #3d7dca;

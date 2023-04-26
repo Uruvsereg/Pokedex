@@ -5,7 +5,7 @@ import NAV from '../../Nav/navbar';
 import Cards from '../../PI/Cards/Cards'
 import PokeBarra from '../../Borders/Poke/Poke';
 import BarraUser from '../../Borders/User/User';
-import {POKEALL, PKMN, GETPKM, PKMTIPOS} from '../../../redux/actions';
+import {POKEALL} from '../../../redux/actions';
 import Paginacion from '../../Filtrado/Paginacion/pagination';
 
 const Inicio=({onSearch})=> {
@@ -15,9 +15,6 @@ const Inicio=({onSearch})=> {
     const [pokemons,setPokemons] = useState([]);
     const [pactual,setPactual] = useState(1);
     const cantidad = 12;
-
-    const limit = cantidad*pactual;
-    const offset = limit-cantidad;
 
     useEffect(() => {
         dispatch(POKEALL())
@@ -39,12 +36,12 @@ const Inicio=({onSearch})=> {
     }
 
     return(
-        <div>
+        <div className={style.fondoInicio}>
             <div className={style.user}>
                 <NAV handleChange={handleChange} onSearch={onSearch}/>
             </div>
             <div>
-                <Cards Poketodos={Poketodos} offset={offset} limit={limit}/>
+                <Cards Poketodos={Poketodos}/>
             </div>
             <div className={style.poke}>
                 <PokeBarra/>
@@ -53,7 +50,7 @@ const Inicio=({onSearch})=> {
                 <BarraUser/>
             </div>
             <div className={style.barra}>
-                <div ><Paginacion cantidad={cantidad} pactual={pactual} setPactual={setPactual}/></div>
+                <div className={style.pagi}><Paginacion cantidad={cantidad} pactual={pactual} setPactual={setPactual}/></div>
             </div>
         </div>
     )

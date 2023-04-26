@@ -35,6 +35,9 @@ const Detalles = ({onSearch}) => {
 
     useEffect(() => {
         dispatch(GETPKM(id))
+        return function () {
+            // dispatch(cleaup())
+        }
     }, [dispatch])
 
     const handleChange = (event) => {
@@ -129,7 +132,7 @@ const Detalles = ({onSearch}) => {
 
     }
     return (
-        <div>
+        <div className={style.background}>
             <div className={style.pokeraza}>
                 <div>
                     <label className={style.label2}>{pokemon.raza}</label>

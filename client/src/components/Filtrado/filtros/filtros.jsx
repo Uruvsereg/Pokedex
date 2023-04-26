@@ -1,20 +1,20 @@
 import style from './filtros.module.css'
 import React from "react";
 
-export const filtros = (onChange) =>{
+export const Filtros = ({onChange, Poketodos}) =>{
     return(
         <select className={style.select}
-        value={pokemon}
+        value={Poketodos}
         onChange = {(event) =>{
             switch(event.target.value){
                 case 'Debil':
-                    return onChange({pokemon:'Ataque', order: 'ascending'});
+                    return onChange({Poketodos:'Ataque', order: 'ascending'});
                 case 'Fuerte':
-                    return onChange({pokemon:'Ataque', order: 'descending'});
+                    return onChange({Poketodos:'Ataque', order: 'descending'});
                 case 'a-z':
-                    return onChange({pokemon:'name', order: 'ascending'});
+                    return onChange({Poketodos:'name', order: 'ascending'});
                 case 'z-a':
-                    return onChange({pokemon:'name', order: 'descending'});
+                    return onChange({Poketodos:'name', order: 'descending'});
                 default:
                     return onChange({})
             }}}

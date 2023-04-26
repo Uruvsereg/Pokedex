@@ -1,7 +1,15 @@
-:root{
+body{
     background: url('../../../Multimedia/IMG/fondo\ seleccion.jpg');
     background-size: cover;
     background-position: center center;
     background-attachment: fixed;
     background-repeat: no-repeat;
+}
+.fondoInicio{
+    top: 0;
+    left: 0;
+    height:unset
+}
+.pagi{
+    margin-left: 87rem;
 }

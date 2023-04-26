@@ -1,7 +1,7 @@
 import { useState } from "react";
 import style from './login.module.css';
 import validation from "./validations";
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 const Formli=({login})=>{
     const [userData, setUserData]=useState({
@@ -38,7 +38,7 @@ const Formli=({login})=>{
     return(
         <div className={style.pag}>
             <form onSubmit={handleSubmit}>
-                <div className={style.ing}>
+                <div className={style.ingreso}>
                     <div className={style.loginu}>
                         <label htmlFor='username' className={style.label1}>Usuario:</label>
                         <label htmlFor='username'>Usuario:  </label>
@@ -51,17 +51,20 @@ const Formli=({login})=>{
                         <input type='password' name='password' value={userData.password} onChange={handleInputChange} className={style.lpe}></input>
                         {errors.password && <p className={style.logp}>{errors.password}</p>}
                     </div>
-                </div>
-                <div className={style.ingreso}>
-                    <div className={style.reg}>
-                        <button><Link to='perfil/registro'>Registro</Link></button>
+                    <div className={style.ingresob}>
+                        <div className={style.reg}>
+                            <button><NavLink to='perfil/registro' >Registro</NavLink></button>
+                        </div>
+                        <div className={style.inv}>
+                            <button><Link to='inicio'>Invitado</Link></button>
+                        </div>
+                        <div className={style.bot}>
+                            <button><Link to='inicio'></Link></button>
+                        </div>
                     </div>
                 </div>
-                    <div className={style.inv}>
-                        <button><Link to='inicio'>Invitado</Link></button>
-                    </div>
-                <div className={style.bot}>
-                    <button><Link to='inicio'></Link></button>
+                <div>
+                    <h1>Pokeapi</h1>
                 </div>
             </form>
         </div>

@@ -1,0 +1,12 @@
+select{
+    width: 11rem;
+    padding: 6px 10px;
+    margin: 10px 0;
+    border: 1px solid bisque;
+    box-sizing: border-box;
+    display: block;
+    border-radius: 8px;
+}
+option{
+    background-color: rgb(225, 255, 0);
+}
